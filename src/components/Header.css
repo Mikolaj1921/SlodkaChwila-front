@@ -60,6 +60,11 @@ header {
   .nav-links li {
     margin: 10px 0; /* Ustawiamy większy odstęp między elementami */
   }
+  
+   /* Ostatni element - dodałem większy odstęp na dole */
+   .nav-links li:last-child {
+    margin-bottom: 20px; /* Większy margines dolny, aby był większy odstęp */
+  }
 
   .nav-links li a {
     font-size: 16px; /* Zmniejszamy czcionkę */
