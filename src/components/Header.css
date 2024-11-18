@@ -32,3 +32,44 @@ header {
     color: #f39c12;  /* Kolor zmienia się na pomarańczowy po najechaniu */
   }
   
+  /* Responsywność dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  /* Zmniejszamy padding w nagłówku na mniejszych ekranach */
+  header {
+    padding: 10px;
+  }
+
+  /* Ustawiamy menu w pionie */
+  .nav-links {
+    display: none; /* Na początku ukrywamy menu */
+    flex-direction: column; /* Menu w pionie */
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 60px; /* Ustawiamy odległość od góry */
+    left: 0;
+    background-color: #333;
+    z-index: 1000;
+  }
+
+  /* Pokazanie menu po kliknięciu przycisku */
+  .nav-links.active {
+    display: flex; /* Wyświetlamy menu, gdy jest aktywne */
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Ustawiamy większy odstęp między elementami */
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Zmniejszamy czcionkę */
+  }
+
+  /* Ikona menu dla urządzeń mobilnych */
+  .menu-icon {
+    display: block; /* Pokazujemy ikonę menu */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+  }
+}
