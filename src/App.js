@@ -1,22 +1,21 @@
+
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+// Importowanie komponentów wspólnych
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+// Importowanie routingu
+import Routing from './routing'; // Zmiana ścieżki na 'src/routing'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routing /> 
+      <Footer />
+    </Router>
   );
 }
 
