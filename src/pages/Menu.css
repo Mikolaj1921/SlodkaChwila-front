@@ -1,0 +1,20 @@
+/* src/components/Menu.css */
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .menu-item {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .menu-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
