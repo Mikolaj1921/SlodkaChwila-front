@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // Importujemy Link z react-router-dom
 import './Header.css';
 
+
 const Header = () => {
   // Stan kontrolujący widoczność menu na urządzeniach mobilnych
   const [menuActive, setMenuActive] = useState(false);
