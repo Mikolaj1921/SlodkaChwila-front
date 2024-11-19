@@ -55,6 +55,7 @@ header {
     cursor: pointer;
     font-size: 18px;
     margin-left: 410px;
+    display: none; /* Ukrywamy toggle w mobilnej wersji */
   }
   
   .sidebar {
@@ -67,6 +68,7 @@ header {
     padding: 20px;
     transition: right 0.3s ease; /* Płynne przesuwanie */
     z-index: 1000; /* Upewniamy się, że pasek jest nad innymi elementami */
+    display: block; /* Domyślnie widoczne na PC */
   }
   
   .sidebar.active {
@@ -111,6 +113,17 @@ header {
     font-size: 30px;
     color: white;
     cursor: pointer;
+  }
+
+    /* Widoczność sidebara tylko na desktopie */
+  @media (max-width: 1024px) {
+    .sidebar {
+        display: none; /* Ukrywamy pasek boczny na urządzeniach mobilnych */
+    }
+
+    .sidebar-toggle {
+        display: none; /* Ukrywamy przycisk bocznego paska na mobilnych */
+    }
   }
 
   /* Responsywność dla urządzeń mobilnych */
