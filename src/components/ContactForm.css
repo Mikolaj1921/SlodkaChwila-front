@@ -1,0 +1,73 @@
+.contact-form-container {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-form-title {
+    font-size: 2rem;
+    color: #6c4f1f; /* Kolor karmelu */
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  .form-textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .form-button {
+    background-color: #e7a12e;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #c68720;
+  }
+  
+  .contact-form-message {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .contact-form-title {
+      font-size: 1.8rem;
+    }
+  
+    .form-input,
+    .form-textarea {
+      font-size: 0.9rem;
+    }
+  
+    .form-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  

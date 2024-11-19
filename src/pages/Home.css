@@ -1,3 +1,4 @@
+
 /* Resetowanie marginesów, paddingów i ustawienie box-sizing dla wszystkich elementów */
 * {
   margin: 0;
@@ -82,7 +83,7 @@ body {
 
 .why-us-section .service-list li::before {
   content: '\2022';
-  color: #6c4f1f; /* Kolor ciastkarski */
+  color: #6c4f1f; 
 }
 
 /* Responsywność */
