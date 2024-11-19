@@ -1,20 +1,106 @@
-/* src/components/Menu.css */
-.menu {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .menu-item {
-    padding: 10px;
-    background-color: #fff;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .menu-item:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
+.menu-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Rozmycie tła */
+}
+
+.menu-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(100%, -50%);
+  color: white;
+  text-align: left ;
+
+}
+
+
+.menu-title {
+  font-size: 30pt;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
+  text-align: start; /* Wyśrodkowanie tekstu */
+  position: relative; /* Potrzebne dla ::after */
+}
+
+.menu-title::after {
+  content: ""; /* Pusty element */
+  display: block; /* Traktuj jako blok */
+  width: 100%; /* Długość linii */
+  height: 3px; /* Grubość linii */
+  background-color: #f39c12; /* Kolor linii */
+  margin: 10px auto 0; /* Odstępy i wyśrodkowanie linii */
+}
+
+
+.menu-text p {
+  font-size: medium;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+/* Sekcja słodkich naleśników */
+.slodkie {
+  display: flex;
+  align-items: center;
+  margin:50px 0;
+}
+
+/* Pojedynczy element "naleśnik z serem" */
+.NalesnikZSerem {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Wyrównanie pionowe */
+  padding: 70px;
+}
+
+/* Tło naleśników */
+.nalesniki {
+
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-image: none; /* Zapewnia wyświetlanie tła */
+  flex-shrink: 0; /* Zapobiega skalowaniu zdjęcia */
+}
+
+.opisnalesniki {
+  padding-left: 50px;
+}
+/* Tekst opisu naleśników */
+.opisnalesniki h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.opisnalesniki p {
+  font-size: 16px;
+  color: #333;
+}
+
+.dish-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.dish-title::after {
+  content: ""; /* Pseudoelement nie ma treści */
+  display: block; /* Traktuj go jak element blokowy */
+  width: 40cap; /* Długość linii */
+  height: 2px; /* Grubość linii */
+  background-color: #f39c12; /* Kolor linii */
+  margin-top: 5px; /* Odstęp od tekstu */
+}
