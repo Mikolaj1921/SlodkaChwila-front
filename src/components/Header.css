@@ -4,6 +4,8 @@
 header {
     background-color: #333;
     padding: 10px 20px;
+    border-bottom: 3px solid #f39c12;
+    position: relative;
   }
   
   nav {
@@ -27,55 +29,134 @@ header {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+    font-family: 'Sora', sans-serif; /* Czcionka dla linków */
+    font-weight: 550; /* Pogrubienie tekstu */
   }
   
   .nav-links li a:hover {
     color: #f39c12;  /* Kolor zmienia się na pomarańczowy po najechaniu */
   }
   
-  /* Responsywność dla urządzeń mobilnych */
-@media (max-width: 768px) {
-  /* Zmniejszamy padding w nagłówku na mniejszych ekranach */
-  header {
-    padding: 10px;
-  }
-
-  /* Ustawiamy menu w pionie */
-  .nav-links {
-    display: none; /* Na początku ukrywamy menu */
-    flex-direction: column; /* Menu w pionie */
-    width: 100%;
+  .logo {
+    display: flex;
     align-items: center;
-    position: absolute;
-    top: 60px; /* Ustawiamy odległość od góry */
-    left: 0;
-    background-color: #333;
-    z-index: 1000;
-  }
-
-  /* Pokazanie menu po kliknięciu przycisku */
-  .nav-links.active {
-    display: flex; /* Wyświetlamy menu, gdy jest aktywne */
-  }
-
-  .nav-links li {
-    margin: 10px 0; /* Ustawiamy większy odstęp między elementami */
+    margin-right: auto;
+    margin-top: 2px;
   }
   
-   /* Ostatni element - dodałem większy odstęp na dole */
-   .nav-links li:last-child {
-    margin-bottom: 20px; /* Większy margines dolny, aby był większy odstęp */
+  .logo img {
+    margin: 5px;
+    height: 25px; /* Wysokość logo */
+    max-width: 90%; /* Zapobieganie rozciąganiu obrazu */
   }
 
-  .nav-links li a {
-    font-size: 16px; /* Zmniejszamy czcionkę */
-  }
-
-  /* Ikona menu dla urządzeń mobilnych */
-  .menu-icon {
-    display: block; /* Pokazujemy ikonę menu */
+  .sidebar-toggle {
+    color: white;
     cursor: pointer;
+    font-size: 18px;
+    margin-left: 410px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Ukrywamy pasek po prawej stronie */
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    transition: right 0.3s ease; /* Płynne przesuwanie */
+    z-index: 1000; /* Upewniamy się, że pasek jest nad innymi elementami */
+  }
+  
+  .sidebar.active {
+    right: 0; /* Pasek wysuwa się na ekran */
+  }
+  
+  .sidebar-content {
+    color: white;
+    padding-top: 50px;
+  }
+  
+  .logo_boczne {
+    padding-top: 10px;
+    padding-bottom: 40px;
+  }
+  .sidebar h2 {
+    color: #f39c12;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: x-large;
+  }
+  
+  .sidebar p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: small;
+  }
+  
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    color: #f39c12;
+  }
+  
+  .close-sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
     font-size: 30px;
     color: white;
+    cursor: pointer;
   }
-}
+
+  /* Responsywność dla urządzeń mobilnych */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px;
+      border-bottom: 3px solid #f39c12; /* Podkreślenie na dole w wersji mobilnej */
+    }
+  
+    .sidebar {
+      right: -250px; /* Mniejszy rozmiar bocznego paska na urządzeniach mobilnych */
+    }
+    
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links li:last-child {
+      margin-bottom: 20px;
+    }
+  
+    .nav-links li a {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+    }
+  }

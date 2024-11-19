@@ -1,73 +1,100 @@
+/* Kontener całego formularza */
 .contact-form-container {
-    margin: 30px auto;
-    padding: 20px;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
+  margin: 40px auto; /* Większy margines dla lepszej estetyki */
+  padding: 25px; /* Większe odstępy wewnątrz */
+  max-width: 600px;
+  background-color: #f9f9f9; /* Delikatny jasny szary */
+  border-radius: 12px; /* Bardziej miękkie zaokrąglenie */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Wyraźniejszy cień dla efektu unoszenia */
+  text-align: center;
+  border: 1px solid #e0e0e0; /* Dodanie delikatnej ramki */
+}
+
+/* Tytuł formularza */
+.contact-form-title {
+  font-size: 2.4rem; /* Lekko większy tytuł */
+  color: #f39c12; /* Kolor karmelowy */
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Pola formularza */
+.form-input,
+.form-textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px; /* Większe odstępy dla lepszej czytelności */
+  margin: 12px 0; /* Większe odstępy między polami */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Zaokrąglenie pasujące do kontenera */
+  font-size: 1rem;
+  font-family: 'Georgia', serif;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtelne wrażenie głębi wewnątrz pola */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Stylizacja pola tekstowego */
+.form-textarea {
+  height: 140px;
+  resize: none; /* Wyłączenie zmiany rozmiaru */
+}
+
+/* Efekt aktywacji dla pól formularza */
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #f39c12; /* Podświetlenie aktywnego pola */
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+  outline: none; /* Usunięcie domyślnego obramowania */
+}
+
+/* Przycisk formularza */
+.form-button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px; /* Dopasowanie zaokrągleń do stylu */
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-button:hover {
+  background-color: #d98209; /* Lekko ciemniejszy karmel */
+  transform: translateY(-2px); /* Subtelny efekt unoszenia */
+}
+
+/* Wiadomości o błędach */
+.contact-form-message {
+  font-size: 0.9rem;
+  color: #e74c3c; /* Intensywny czerwony dla błędów */
+  margin-top: 5px;
+}
+
+/* Stylizacja etykiet */
+label {
+  display: block; /* Wyświetlenie nad polem */
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px; /* Odstęp między etykietą a polem */
+  color: #333; /* Neutralny kolor tekstu */
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
   .contact-form-title {
-    font-size: 2rem;
-    color: #6c4f1f; /* Kolor karmelu */
-    font-family: 'Pacifico', cursive;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Mniejszy tytuł na węższych ekranach */
   }
-  
+
   .form-input,
   .form-textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: 'Georgia', serif;
+    font-size: 0.9rem; /* Mniejsze pola */
   }
-  
-  .form-textarea {
-    height: 120px;
-    resize: none;
-  }
-  
+
   .form-button {
-    background-color: #e7a12e;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-button:hover {
-    background-color: #c68720;
-  }
-  
-  .contact-form-message {
     font-size: 1rem;
-    color: #333;
-    margin-top: 15px;
+    padding: 12px 20px;
   }
-  
-  /* Responsywność */
-  @media (max-width: 768px) {
-    .contact-form-title {
-      font-size: 1.8rem;
-    }
-  
-    .form-input,
-    .form-textarea {
-      font-size: 0.9rem;
-    }
-  
-    .form-button {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
-  }
-  
+}

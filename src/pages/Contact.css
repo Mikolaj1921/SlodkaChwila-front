@@ -6,6 +6,7 @@
     text-align: center;
 }
 
+
 .contact-title {
     font-size: 3rem;
     color: #6c4f1f; /* Kolor karmelu */
@@ -13,29 +14,66 @@
     margin-bottom: 20px;
 }
 
+
 .contact-subtitle {
     font-size: 1.5rem;
-    color: #e7a12e; /* Kolor słodkich wypieków */
+    color: #f39c12; /* Kolor słodkich wypieków */
     margin-bottom: 30px;
 }
 
+
 .contact-info {
-    font-size: 1.2rem;
+    display: flex;
+    align-items: flex-start; /* Dopasowanie do góry */
+    gap: 20px; /* Odstęp między mapą a tekstem */
     margin: 20px auto;
-    line-height: 1.6;
+    max-width: 900px; /* Szerokość całego kontenera */
 }
 
-.contact-info p {
+
+  
+.map-container {
+    padding: 15px;
+    flex: 1; /* Zajmuje 50% dostępnego miejsca */
+    max-width: 75%; /* Maksymalna szerokość mapy */
+    border-radius: 12px;
+    background-color: #ffffff00;
+    overflow: hidden; /* Zaokrąglone rogi mapy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lekki cień dla mapy */
+}
+
+  
+.contact-details {
+    flex: 1; /* Zajmuje pozostałe 50% miejsca */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+  
+.contact-details p {
     margin: 10px 0;
 }
+  
+.contact-details h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #f39c12; /* Akcent kolorystyczny */
+}
+  
+
 
 /* Responsywność */
 @media (max-width: 768px) {
-    .contact-title {
-        font-size: 2.5rem;
+    .contact-info {
+      flex-direction: column; /* Mapka i tekst w kolumnie */
+      align-items: center; /* Wyśrodkowanie zawartości */
     }
-
-    .contact-subtitle {
-        font-size: 1.2rem;
+  
+    .map-container {
+      max-width: 100%;
     }
-}
+  
+    .contact-details {
+      text-align: center; /* Wyrównanie tekstu w środku */
+    }
+  }
