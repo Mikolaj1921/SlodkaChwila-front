@@ -4,6 +4,7 @@
   background-size: cover;
   background-position: center;
   filter: blur(2px); /* Rozmycie tła */
+  z-index: -1000;
 }
 
 .menu-text {

@@ -1,14 +1,20 @@
 import React from 'react';
 import './Home.css'; // Importujemy zaktualizowane style
+import backgroundImage from '../components/images/dohome.jpg';
 
 const Home = () => {
   return (
     <div className="home-page">
-      <h1 className="hero-title">Witaj w Słodkiej Chwili!</h1>
-      <p className="hero-subtitle">Ciepłe, domowe wypieki na każdą okazję</p>
+      <div className="menu-cont" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      </div>
+      
+      <div className="title-names">
+        <h1 className="hero-title">Witaj w Słodkiej Chwili!</h1>
+        <p className="hero-subtitle">Ciepłe, domowe wypieki na każdą okazję</p>
+      </div>
 
       <section className="about-section">
-        <h2 className="section-title">Nasze wypieki</h2>
+        <h2 className="section-title">Nasze wypieki:</h2>
         <ul className="service-list">
           <li>Ciasta na każdą okazję</li>
           <li>Świeże ciasteczka i ciasteczka</li>

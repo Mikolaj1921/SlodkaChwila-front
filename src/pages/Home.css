@@ -1,9 +1,10 @@
-
-/* Resetowanie marginesów, paddingów i ustawienie box-sizing dla wszystkich elementów */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.menu-cont {
+  position: relative;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px); /* Rozmycie tła */
+  z-index: -1000; 
 }
 
 /* Ustawienie body na 100% wysokości i szerokości */
@@ -17,9 +18,12 @@ body {
   color: #333;
 }
 
-/* Styl dla głównej strony */
-.home-page {
-  padding: 20px;
+.title-names {
+  right: 100px;
+  position: absolute;
+  transform: translate(-50%, -130%);
+  color: white;
+  text-align: left ;
 }
 
 .hero-title {
@@ -36,6 +40,10 @@ body {
   text-align: center;
   color: #e7a12e; /* Kolor przypominający słodkie wypieki */
   margin-bottom: 30px;
+}
+
+.about-section {
+  padding: 20px;
 }
 
 .section-title {
