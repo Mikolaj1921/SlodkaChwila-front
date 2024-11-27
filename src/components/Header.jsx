@@ -64,9 +64,13 @@ const Header = () => {
           <p>Sobota: 12:00-01:00</p>
           <p>Niedziela: 12:00-22:00</p>
         </div>
+        
+        
         <div className="close-sidebar" onClick={toggleSidebar}>
-          &times; {/* Symbol zamknięcia paska */}
+          &times; 
         </div>
+        
+
       </div>
     </header>
   );
