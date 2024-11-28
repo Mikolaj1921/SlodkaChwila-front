@@ -19,8 +19,9 @@ body {
               url('../components/images/dohome.jpg');
   background-size: cover;
   background-position: center;
+  
   z-index: 0;
-  transition: background-position 2s ease-out;
+  transition: background-position 0.25s ease-out;
 }
 
 .title-names {
@@ -83,7 +84,7 @@ body {
 }
 .card1:hover {
   flex: 2;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 
@@ -98,7 +99,7 @@ body {
 }
 .card2:hover {
   flex: 2;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .card3 {
@@ -112,7 +113,7 @@ body {
 }
 .card3:hover {
   flex: 2;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 
@@ -216,8 +217,8 @@ body {
 
 /*Sekcja unikalneWypieki*/
 .unikalneWypieki {
-  padding-top: 40px;
-  padding-bottom: 70px;
+  padding-top: 20px;
+  padding-bottom: 90px;
   position: relative;
 }
 
@@ -260,20 +261,20 @@ body {
 }
 .card4:hover {
   flex: 2;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .card4 button {
-  position: relative; /* Pozycjonowanie absolutne względem .card1 */
-  top: 115%; /* Ustawienie przycisku na środku w pionie */
-  left: 50%; /* Ustawienie przycisku na środku w poziomie */
-  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
-  padding: 10px 50px; /* Przykładowe wymiary przycisku */
-  background-color: #e7a02e96; /* Kolor tła */
-  color: white; /* Kolor tekstu */
+  position: relative; 
+  top: 115%; 
+  left: 50%; 
+  transform: translate(-50%, -400%); 
+  padding: 10px 50px; 
+  background-color: #e7a02e96; 
+  color: white; 
   border: none; /* Usunięcie obramowania */
-  border-radius: 5px; /* Zaokrąglone rogi */
-  font-size: 1rem; /* Rozmiar czcionki */
+  border-radius: 5px; 
+  font-size: 1rem; 
   cursor: pointer; /* Zmiana kursora na wskaźnik */
   transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
 }
@@ -294,7 +295,7 @@ body {
 }
 .card5:hover {
   flex: 2;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .card5 button {
@@ -314,6 +315,488 @@ body {
 
 .card5 button:hover {
   background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+
+
+
+/*Sezonowe wypieki*/
+.SezonoweWypieki {
+  padding-top: 20px;
+  padding-bottom: 90px;
+  position: relative;
+}
+
+
+.sezonwypieki {
+  color: #e7a12e;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Pacifico', cursive ;
+}
+
+.subtitle {
+  color: #e7a12e;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Pacifico', cursive ;
+}
+
+.containerWypieki3 {
+  display: flex;
+  gap: 50px; /* Odstęp między kartami */
+  justify-content: center; /* Wyrównanie kart na środku */
+  align-items: center; /* Wyrównanie w pionie */
+  padding: 30px; /* Odstęp od krawędzi */
+}
+
+.card6 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/wiosna.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card6 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card6 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+
+.card7 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/lato.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card7 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card7 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+.card8 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/jesien.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card8 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card8 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+.card9 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/zima.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card9 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card9 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+.card10 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/season.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card10 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card10 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+.card11 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/drinks.jpg') center/cover no-repeat;
+  flex: 1;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.card11 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 150px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card11 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła przycisku */
+}
+
+.card12 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/zimowe.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card12:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card12 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 75px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card12 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+
+.card13 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/wiosenne.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card13:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card13 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 75px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card13 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+
+.card14 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/letnie.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card14:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card14 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 75px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card14 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+
+.card15 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/jesienne.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card15:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card15 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 75px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card15 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+.containerNapoje{
+  display: flex;
+  gap: 20px; /* Odstęp między kartami */
+  justify-content: center; /* Wyrównanie kart na środku */
+  align-items: center; /* Wyrównanie w pionie */
+  padding: 10px;
+}
+
+.containerOpisNapoje{
+  grid-template-columns: 1fr 1fr;  /* Równe dzielenie kontenera na pół */
+  position: relative; 
+  display: grid;
+  gap: 50px; /* Odstęp między kartami */
+  padding: 35px;
+  text-align: center; /* Centrowanie tekstu */
+}
+
+.TytulSeason {
+  position: relative;
+  font-size: x-large;
+  padding-bottom: 10px;
+}
+
+/*Sekcja informacje*/
+.informacje{
+  background-color: #6c4f1f13;
+}
+
+.section-title-info {
+  font-size: 2rem;
+  text-align: center;
+  color: #6c4f1f; 
+  font-family: 'Lobster', cursive; /* Stylizowana czcionka dla tytułów */
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.info-opis {
+  padding: 30px;
+  text-align: left;
+  font-size: large;
+  font-family: 'Pacifico', cursive ;
+}
+
+.containerInfo{
+  display: flex;
+  gap: 20px; /* Odstęp między kartami */
+  justify-content: center; /* Wyrównanie kart na środku */
+  align-items: center; /* Wyrównanie w pionie */
+  padding: 10px;
+}
+
+.card16 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/kontakt.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card16:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card16 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 100px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card16 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+.card17 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/aktualnosci.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card17:hover {
+  flex: 2;
+  transform: scale(1);
+}
+
+.card17 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 100px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02ec0; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.9s ease; /* Płynna zmiana koloru tła */
+}
+
+.card17 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+.info-tytul-media {
+  padding: 30px;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Pacifico', cursive ;
+}
+
+.info-opis-media {
+  
+  padding: 30px;
+  text-align: center;
+  font-size: large;
+  font-family: 'Pacifico', cursive ;
 }
 
 /* Responsywność */

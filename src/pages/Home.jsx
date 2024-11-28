@@ -1,5 +1,6 @@
 import React from 'react';
 import './Home.css'; // Importujemy zaktualizowane style
+//import { Container } from 'postcss';
 //import backgroundImage from '../components/images/dohome.jpg';
 
 //Górne tło pod nagłówkiem(przewijanie się zależne od scroolingu)
@@ -8,7 +9,7 @@ window.addEventListener('scroll', function() {
   const menuCont = document.querySelector('.menu-cont');
   
   // Zmieniamy pozycję tła w zależności od scrolla
-  menuCont.style.backgroundPosition = `center ${50 - scrollPosition * 0.04}%`;
+  menuCont.style.backgroundPosition = `center ${50 - scrollPosition * 0.02}%`;
 });
 
 
@@ -102,15 +103,218 @@ const Home = () => {
 
       </section>
 
-      {/*
-        <ul className="service-list">
-          <li>Ciasta na każdą okazję</li>
-          <li>Świeże ciasteczka i ciasteczka</li>
-          <li>Desery bezglutenowe</li>
-          <li>Cukierki i praliny</li>
-          <li>Wypieki sezonowe</li>
+      <section className="SezonoweWypieki">
+        <h2 className="section-title">Sezonowe Wypieki w SłodkaChwila – Poczuj Magię Każdej Pory Roku!</h2>
+        <ul className="service-list2">
+          <h3>
+            W cukierni SłodkaChwila każdy sezon to okazja, by zaoferować Ci wyjątkowe wypieki,
+            które czerpią z najlepszych smaków i aromatów pory roku. Nasze sezonowe wypieki to
+            połączenie tradycji z nowoczesnymi inspiracjami, dzięki czemu możesz cieszyć się
+            niezapomnianymi smakami, które pasują do każdej okazji i pory roku.
+          </h3>
         </ul>
-        */}
+        <h2 className="subtitle">Wiosna: Świeże i Owocowe Inspiracje</h2>
+        <ul className="service-list2">
+          <h3>
+            Wiosną, kiedy przyroda budzi się do życia, nasze wypieki nabierają lekkich i świeżych smaków.
+            Ciasta z owocami sezonowymi, takie jak truskawki, jagody czy rabarbar, to idealny wybór na
+            ciepłe, słoneczne dni. W tym okresie serwujemy również delikatne biszkopty i tarty z lekkimi
+            kremami, które przypominają wiosenne poranki. Nasze wiosenne wypieki to prawdziwa uczta dla
+            zmysłów, które wprowadzą Cię w radosny, pełen energii nastrój.
+          </h3>
+        </ul>
+        <ul className="containerWypieki3">
+          <div className="card6">
+            <button>Odkryj wiosenne smaki Słodkiej Chwili</button>
+          </div>
+        </ul>
+        <h2 className="subtitle">Lato: Chłodne, Owocowe Orzeźwienie</h2>
+        <ul className="service-list2">
+          <h3>
+            Lato to czas na lekkie i orzeźwiające wypieki, które zaspokoją pragnienie i dodadzą energii.
+            W ofercie znajdziesz lemoniady w formie ciast, letnie tarty z owocami takimi jak maliny,
+            porzeczki czy borówki, a także bezy z lekkimi kremami na bazie mascarpone. Wszystkie nasze
+            wypieki są pełne naturalnych, owocowych smaków, które przywołują wspomnienia letnich dni.
+            Ciesz się świeżymi, chłodnymi wypiekami, które są idealnym uzupełnieniem letnich spotkań
+            i pikników.
+          </h3>
+        </ul>
+        <ul className="containerWypieki3">
+          <div className="card7">
+            <button>Odkryj letnie orzeźwiające smaki Słodkiej Chwili</button>
+          </div>
+        </ul>
+
+        <h2 className="subtitle">Jesień: Aromatyczne Przyprawy i Korzenne Smaki</h2>
+        <ul className="service-list2">
+          <h3>
+          Jesień to czas, w którym pojawiają się intensywne, korzenne smaki.
+          W SłodkaChwila nie możemy się oprzeć aromatom cynamonu, goździków, imbiru i gałki muszkatołowej.
+          Nasze ciasta z dynią, jabłeczniki, a także korzenne ciasteczka wypełniają zapachem całe wnętrze
+          cukierni. Te wypieki to prawdziwa rozkosz dla smakoszy, którzy cenią sobie głębokie,
+          rozgrzewające smaki idealne na chłodne, jesienne wieczory. W ofercie znajdują się także pyszne
+          ciasta z orzechami, które świetnie komponują się z filiżanką ciepłej herbaty.
+          </h3>
+        </ul>
+        <ul className="containerWypieki3">
+          <div className="card8">
+            <button>Odkryj jesienne rozgrzewające smaki Słodkiej Chwili</button>
+          </div>
+        </ul>
+
+        <h2 className="subtitle">Zima: Czekolada, Orzechy i Słodkie Przyprawy</h2>
+        <ul className="service-list2">
+          <h3>
+          Zima to czas na intensywne smaki, które rozgrzewają i dodają energii.
+          W tym okresie nasze wypieki to połączenie czekolady, orzechów i przypraw.
+          W menu pojawiają się pierniki, pyszne ciasta czekoladowe, kremowe rolady
+          oraz świąteczne ciasteczka z korzennymi przyprawami. Idealnym wyborem są
+          także ciasta z dodatkiem alkoholu, które wprowadzają w świąteczny nastrój.
+          Oferujemy również świąteczne pączki i karnawałowe przysmaki, które umilą Ci
+          zimowe dni i święta.
+
+          Nasze sezonowe wypieki to nie tylko pyszne ciasta, ale także wspomnienia i emocje, które towarzyszą każdej porze roku. Dzięki świeżym, lokalnym składnikom i naszym unikalnym przepisom, każdy sezon staje się okazją, by rozkoszować się nowymi smakami. SłodkaChwila to miejsce, gdzie pasja do pieczenia spotyka się z miłością do sezonowych smaków. Zapraszamy do naszej cukierni, by spróbować wypieków, które zmieniają się wraz z porami roku – zrób sobie słodką chwilę każdego dnia!
+
+          </h3>
+        </ul>
+        <ul className="containerWypieki3">
+          <div className="card9">
+            <button>Odkryj zimowe smaki Słodkiej Chwili</button>
+          </div>
+        </ul>
+
+
+        <h2 className="subtitle">O sezonowych wypiekach</h2>
+        <ul className="service-list2">
+          <h3>
+          Nasze sezonowe wypieki to nie tylko pyszne ciasta, ale także wspomnienia i emocje,
+          które towarzyszą każdej porze roku. Dzięki świeżym, lokalnym składnikom i naszym unikalnym 
+          przepisom, każdy sezon staje się okazją, by rozkoszować się nowymi smakami. SłodkaChwila 
+          to miejsce, gdzie pasja do pieczenia spotyka się z miłością do sezonowych smaków.</h3>
+          <h3>
+          Zapraszamy do naszej cukierni, by spróbować wypieków, które zmieniają się wraz z porami
+          roku – zrób sobie słodką chwilę każdego dnia!
+          </h3>
+        </ul>
+        <ul className="containerWypieki3">
+          <div className="card10">
+            <button>Sezonowe wypieki</button>
+          </div>
+        </ul>
+
+
+      </section>
+
+      <section className="Napoje">
+        <h2 className="section-title">Napoje, które Umilą Twoją Chwilę</h2>
+          <ul className="service-list2">
+            <h3>
+            W SłodkiejChwili napoje to coś więcej niż tylko dodatek do wypieków – to małe
+            rytuały przyjemności, które współgrają z porami roku i wzbogacają doświadczenie
+            naszych gości. Przygotowywane z najwyższą starannością, na bazie świeżych składników
+            i aromatycznych dodatków, idealnie podkreślają smak słodkich przysmaków.</h3>
+            <h3>
+            Nasze napoje to harmonia klasyki i kreatywności. Kawa, herbata i gorąca czekolada tworzą
+            podstawę naszej oferty, a ich smaki są wzbogacane naturalnymi syropami, przyprawami
+            i mlekiem roślinnym dla tych, którzy szukają czegoś wyjątkowego. Każdy łyk przynosi
+            chwilę relaksu, która pozwala zwolnić tempo i cieszyć się chwilą.
+            </h3>
+          </ul>
+          <ul className="containerWypieki3">
+            <div className="card11">
+              <button>Napoje SłodkaChwila</button>
+            </div>
+          </ul>
+
+          <h2 className="section-title">Seasonowe napoje SłodkiejChwili</h2>
+          <ul className="service-list2">
+            <h3>
+            Sezonowe napoje w SłodkiejChwili to wyjątkowe kompozycje inspirowane zmieniającymi się
+            porami roku. Dzięki starannie dobranym składnikom i kreatywnym połączeniom smaków, każdy
+            sezon staje się okazją do odkrywania nowych ulubionych napojów. To coś więcej niż zwykły
+            napój – to uczta dla zmysłów i sposób na celebrację chwili.</h3>
+          </ul>
+          <ul className="containerNapoje">
+            <div className="card12">
+              <button>Napoje Zimowe</button>
+              
+            </div>
+            <div className="card13">
+              <button>Napoje Wiosenne</button> 
+            </div>
+          </ul>
+
+          <div className='containerOpisNapoje'>
+            <div className='opisZima'>
+              <h3 className="TytulSeason">Zima – Rozgrzewająca Magia</h3>
+              <h3>W chłodne, zimowe dni oferujemy napoje, które nie tylko rozgrzewają, ale także wprowadzają w świąteczny nastrój.
+                Piernikowe latte – kawa z nutą przypraw korzennych, cynamonu i miodu.
+                Czekolada na gorąco z chilli – kremowa, z lekką ostrością, która dodaje energii.
+                Grzane jabłka z imbirem i goździkami – aromatyczny, bezalkoholowy napój, idealny na mroźne dni.</h3>
+            </div>
+            <div className="OpisWiosna">
+              <h3 className="TytulSeason">Wiosna – Lekkość i Świeżość</h3>
+              <h3>Wiosenne napoje to eksplozja delikatnych i orzeźwiających smaków, które przywodzą na myśl budzącą się naturę.
+                  Cytrusowa herbata z lawendą – delikatna, z nutą kwiatowych aromatów.
+                  Zielona herbata z miętą i miodem – odświeżająca i lekko słodka.
+                  Lemoniada z kwiatem bzu – subtelna, z odrobiną wiosennej słodyczy.</h3>
+            </div>
+          </div>
+          <ul className="containerNapoje">
+            <div className="card14">
+              <button>Napoje Letnie</button>
+              
+            </div>
+            <div className="card15">
+              <button>Napoje Jesienne</button> 
+            </div>
+          </ul>
+          <div className='containerOpisNapoje'>
+            <div className='opisLato'>
+              <h3 className="TytulSeason">Lato – Orzeźwienie w Każdym Łyku</h3>
+              <h3>Latem królują napoje chłodzące, które gaszą pragnienie i dodają energii w upalne dni.
+                  Mrożona kawa z lodami waniliowymi – idealne połączenie kawy i deseru.
+                  Lemoniada arbuzowa z miętą – słodka i orzeźwiająca.
+                  Iced tea z brzoskwinią i hibiskusem – lekka, owocowa propozycja na gorące dni.</h3>
+            </div>
+            <div className="OpisJesień">
+              <h3 className="TytulSeason">Jesień – Bogactwo Smaków</h3>
+              <h3>Jesienne napoje to ciepłe i aromatyczne kompozycje, które rozgrzewają i dodają otuchy.
+                  Pumpkin spice latte – klasyk o smaku dyni i przypraw korzennych.
+                  Gruszka z cynamonem na ciepło – słodki napój z naturalnym aromatem jesiennych owoców.
+                  Herbata z suszonymi owocami i goździkami – pełna głębokiego, rozgrzewającego smaku.</h3>
+            </div>
+          </div>
+
+      </section>
+
+      <section className="informacje">
+        <h2 className="section-title-info">Informacje o nas</h2>
+        <ul className="info-opis">
+          <h3>
+            Słodka Chwila to miejsce, w którym każdy kęs to prawdziwa przyjemność. Nasza cukiernia powstała z pasji do pieczenia i miłości do wyjątkowych smaków. Stawiamy na jakość i świeżość składników, dlatego w naszych wypiekach znajdziesz tylko najlepsze produkty, pochodzące od lokalnych dostawców. Chcemy, aby każda chwila spędzona w Słodkiej Chwili była pełna radości, dlatego nasza oferta zmienia się zgodnie z porami roku, oferując zawsze coś świeżego, pysznego i w pełni dopasowanego do nastroju każdej pory roku.
+           </h3><h3> W Słodkiej Chwili znajdziesz szeroką gamę wypieków – od klasycznych ciast, przez kreatywne torty, aż po małe słodkości idealne na prezent czy do podzielenia się z bliskimi. Nasze ciasta są przygotowywane z miłością, aby dostarczyć Ci niezapomnianych smaków, które otulą Cię w każdej chwili. Dzięki wyjątkowym recepturom i unikalnym połączeniom smakowym nasze wypieki to nie tylko jedzenie – to prawdziwa przyjemność, którą warto dzielić.
+           </h3><h3>Słodka Chwila to także przestrzeń, w której można spędzić czas w miłej atmosferze, pijąc aromatyczną kawę i delektując się słodkościami w towarzystwie bliskich. Nasza cukiernia to więcej niż miejsce na szybki deser – to przestrzeń pełna inspiracji i smaków, które na długo pozostaną w pamięci.
+           </h3><h3>Dołącz do nas i zrób sobie słodką chwilę w ciągu dnia!
+          </h3>
+        </ul>
+        <ul className="containerInfo">
+            <div className="card16">
+              <button>Kontakt</button>
+            </div>
+
+            <div className="card17">
+              <button>Aktualności</button> 
+            </div>
+        </ul>
+        <ul className="info-tytul-media">
+          <h3>Zaobserwój nas na mediach społecznościowych:</h3>
+        </ul>
+        <ul className="info-opis-media">
+          <h3><strong>Instagram:</strong> slodkachwila_rzeszow</h3>
+          <h3><strong>Facebook:</strong> SlodkaChwila Rzeszow</h3>
+        </ul>
+      </section>
     </div>
   );
 };
