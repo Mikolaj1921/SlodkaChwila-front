@@ -1,12 +1,3 @@
-.menu-cont {
-  position: relative;
-  height: 40vh;
-  background-size: cover;
-  background-position: center;
-  filter: blur(15px); /* Rozmycie tła */
-  z-index: -1000; 
-}
-
 /* Ustawienie body na 100% wysokości i szerokości */
 body {
   width: 100%;
@@ -18,38 +9,56 @@ body {
   color: #333;
 }
 
+
+
+
+.menu-cont {
+  position: relative;
+  height: 40vh;
+  background: linear-gradient(to bottom, rgba(233, 171, 0, 0), #f7f1e1 90%), 
+              url('../components/images/dohome.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: background-position 2s ease-out;
+}
+
 .title-names {
-  right: 100px;
-  position: absolute;
-  transform: translate(-50%, -130%);
+  padding: 55px;
+  position: relative;
   color: white;
-  text-align: left ;
+  text-align: center ;
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: bold;
-  text-align: center;
-  color: #6c4f1f; /* Kolor przypominający karmel */
-  font-family: 'Pacifico', cursive; /* Ładna czcionka w stylu cukierni */
-  margin-top: 50px;
+  color: #6c4f1f; 
+  font-family: 'Pacifico', cursive; 
+  
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  text-align: center;
-  color: #e7a12e; /* Kolor przypominający słodkie wypieki */
-  margin-bottom: 30px;
+  color: #e7a12e; 
 }
 
+
+
+
+
+
+
 .about-section {
+  min-height: 30vh;
+  z-index: 1;
   padding: 20px;
 }
 
 .section-title {
   font-size: 2rem;
   text-align: center;
-  color: #6c4f1f; /* Kolor przypominający karmel */
+  color: #6c4f1f; 
   font-family: 'Lobster', cursive; /* Stylizowana czcionka dla tytułów */
   margin-bottom: 20px;
 }
@@ -62,21 +71,128 @@ body {
   margin-top: 20px;
 }
 
-.service-list li {
-  margin-bottom: 15px;
-  padding-left: 20px;
-  position: relative;
+.containerWypieki {
+  display: flex;
+  gap: 20px; /* Odstęp między kartami */
+  justify-content: center; /* Wyrównanie kart na środku */
+  align-items: center; /* Wyrównanie w pionie */
+  padding: 20px; /* Odstęp od krawędzi */
 }
 
-.service-list li::before {
-  content: '\2022'; /* Kropki dla wypieków */
+.card1 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 200px;
+  background: url('../components/images/menu.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card1:hover {
+  flex: 2;
+  transform: scale(1.1);
+}
+
+
+.card2 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 200px;
+  background: url('../components/images/ciasteczka.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card2:hover {
+  flex: 2;
+  transform: scale(1.1);
+}
+
+.card3 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 200px;
+  background: url('../components/images/bezglutenowe.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card3:hover {
+  flex: 2;
+  transform: scale(1.1);
+}
+
+
+
+
+.card1 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 20px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card1 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+.card2 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 20px; /* Przykładowe wymiary przycisku */
+  background-color: #ba7934; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card2 button:hover {
+  background-color: #e7a02e96; /* Zmiana koloru tła na hover */
+}
+
+.card3 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 20px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card3 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+/*
+.card li::before 
+  content: '\2022';
   font-size: 1.5rem;
-  color: #e7a12e; /* Kolor przypominający karmel */
+  color: #e7a12e; 
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
+*/
 
 /* Sekcja "Dlaczego warto nas wybrać?" */
 .why-us-section {
@@ -109,6 +225,11 @@ body {
   }
 
   .service-list li {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .title-names {
+    position: center;
+    text-align: center;
   }
 }
