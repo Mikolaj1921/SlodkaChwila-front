@@ -55,21 +55,14 @@ body {
   padding: 20px;
 }
 
-.section-title {
-  font-size: 2rem;
+/* tekst do napisu nasze wypieki*/
+.l1 {
+  padding: 30px;
   text-align: center;
-  color: #6c4f1f; 
-  font-family: 'Lobster', cursive; /* Stylizowana czcionka dla tytułów */
-  margin-bottom: 20px;
+  font-size: large;
+  font-family: 'Pacifico', cursive ;
 }
 
-/* Lista wypieków */
-.service-list {
-  list-style: none;
-  padding-left: 0;
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
 
 .containerWypieki {
   display: flex;
@@ -182,17 +175,8 @@ body {
   background-color: #6c4f1f; /* Zmiana koloru tła na hover */
 }
 
-/*
-.card li::before 
-  content: '\2022';
-  font-size: 1.5rem;
-  color: #e7a12e; 
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-*/
+
+
 
 /* Sekcja "Dlaczego warto nas wybrać?" */
 .why-us-section {
@@ -201,13 +185,135 @@ body {
   margin-top: 30px;
 }
 
-.why-us-section .service-list li {
-  padding-left: 20px;
+.why-us-section .service-list h3 {
+  padding: 10px;
 }
 
-.why-us-section .service-list li::before {
+.why-us-section .service-list h3::before {
+  margin-right: 15px;
   content: '\2022';
   color: #6c4f1f; 
+  font-size: 1rem; 
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #6c4f1f; 
+  font-family: 'Lobster', cursive; /* Stylizowana czcionka dla tytułów */
+  margin-bottom: 20px;
+}
+
+/* Lista wypieków */
+.service-list {
+  padding: 30px;
+  text-align: left;
+  font-size: large;
+  font-family: 'Pacifico', cursive ;
+
+}
+
+
+/*Sekcja unikalneWypieki*/
+.unikalneWypieki {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.service-list2 {
+  padding: 30px;
+  text-align: left;
+  font-size: large;
+  font-family: 'Pacifico', cursive ;
+}
+
+.unikalneWypieki .service-list2 h3 {
+  padding: 10px;
+  
+}
+
+.unikalneWypieki .service-list2 h3::before {
+  margin-right: 15px;
+  content: '\2023';
+  color: #6c4f1f; 
+  font-size: 1.3rem; 
+}
+
+
+.containerWypieki2 {
+  display: flex;
+  gap: 50px; /* Odstęp między kartami */
+  justify-content: center; /* Wyrównanie kart na środku */
+  align-items: center; /* Wyrównanie w pionie */
+  padding: 30px; /* Odstęp od krawędzi */
+}
+
+.card4 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/pralinycukierkiB.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card4:hover {
+  flex: 2;
+  transform: scale(1.1);
+}
+
+.card4 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 50px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card4 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
+}
+
+
+.card5 {
+  border-radius: 20px;
+  margin-left: 20px;
+  width: 300px;
+  height: 250px;
+  background: url('../components/images/czekoladyB.jpg') center/cover no-repeat;
+  flex: 1;
+  transition: 0.9s all ease;
+}
+.card5:hover {
+  flex: 2;
+  transform: scale(1.1);
+}
+
+.card5 button {
+  position: relative; /* Pozycjonowanie absolutne względem .card1 */
+  top: 115%; /* Ustawienie przycisku na środku w pionie */
+  left: 50%; /* Ustawienie przycisku na środku w poziomie */
+  transform: translate(-50%, -400%); /* Przesunięcie przycisku, aby był idealnie na środku */
+  padding: 10px 75px; /* Przykładowe wymiary przycisku */
+  background-color: #e7a02e96; /* Kolor tła */
+  color: white; /* Kolor tekstu */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglone rogi */
+  font-size: 1rem; /* Rozmiar czcionki */
+  cursor: pointer; /* Zmiana kursora na wskaźnik */
+  transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+}
+
+.card5 button:hover {
+  background-color: #6c4f1f; /* Zmiana koloru tła na hover */
 }
 
 /* Responsywność */
