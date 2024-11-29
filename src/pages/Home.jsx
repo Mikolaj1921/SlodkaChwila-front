@@ -26,7 +26,7 @@ const Home = () => {
           ciasteczek i innych pyszności, które łączą tradycję z nowoczesnymi smakami.</h3>
           Nasze wypieki powstają z najlepszych składników, co gwarantuje ich
           niezrównany smak i jakość.</div>
-        <div className="containerInfo">
+        <div className="containerInfo1">
           <div className="card1">
             <button>Ciasta na każdą okazję</button>
           </div>

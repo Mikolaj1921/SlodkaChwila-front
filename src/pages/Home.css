@@ -179,6 +179,18 @@ body {
   padding: 10px;
 }
 
+/* Nowy układ kart w .containerInfo */
+.containerInfo1 {
+  display: flex;
+  justify-content: center; /* Wyrównanie kart na środku */
+  gap: 20px; /* Odstęp między kartami */
+  padding: 10px;
+  align-items: center; /* Centrowanie kart w poziomie */
+  height: 400px; /* Ustawienie wysokości kontenera */
+}
+
+
+
 .info-tytul-media {
   padding: 30px;
   text-align: center;
@@ -224,6 +236,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .home-page {
+    font-family: 'Merriweather', serif;
+  }
+  
   .menu-cont {
     height: 30vh; /* Mniejsza wysokość na tabletach */
     background-size: cover;
@@ -242,7 +258,7 @@ body {
     font-size: 1.5rem;
   }
 
-  .service-list li {
+  .service-list h3 {
     font-size: 0.9rem;
   }
 
@@ -261,6 +277,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .home-page {
+    font-family: 'Merriweather', serif;
+  }
   .menu-cont {
     height: 25vh; /* Mniejsza wysokość na urządzeniach mobilnych */
     background-size: cover;
@@ -279,7 +298,7 @@ body {
     font-size: 1.4rem;
   }
 
-  .service-list li {
+  .service-list h3 {
     font-size: 0.9rem;
   }
 
@@ -288,6 +307,7 @@ body {
   }
 
   .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
+
     flex-direction: column;
     gap: 10px; /* Zmniejsz odstępy w wersji na małe urządzenia */
     padding: 15px;
@@ -300,9 +320,18 @@ body {
   .info-tytul-media, .info-opis-media {
     font-size: medium;
   }
+
+
+  .containerInfo1 {
+    flex-direction: column; /* Układ kolumnowy na małych ekranach */
+  }
 }
 
 @media (max-width: 480px) {
+  .home-page {
+    font-family: 'Merriweather', serif;
+  }
+
   .menu-cont {
     height: 20vh; /* Jeszcze mniejsza wysokość na bardzo małych ekranach */
     background-size: cover;
@@ -318,11 +347,15 @@ body {
   }
 
   .section-title {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
   }
 
-  .service-list li {
-    font-size: 0.8rem;
+  .l1{
+    font-size: 1rem;
+  }
+
+  .service-list h3 {
+    font-size: 1rem;
   }
 
   .title-names {
@@ -336,10 +369,18 @@ body {
   }
 
   .service-list, .service-list2 {
-    font-size: small;
+    font-size: 1rem;
   }
 
   .info-tytul-media, .info-opis-media {
-    font-size: small;
+    font-size: 1rem;
+  }
+
+  .info-opis{
+    font-size: 1rem;
+  }
+  
+  .containerInfo1 {
+    flex-direction: column; /* Układ kolumnowy na małych ekranach */
   }
 }
