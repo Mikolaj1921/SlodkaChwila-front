@@ -6,6 +6,7 @@
     background: url('../components/images/menu.jpg') center/cover no-repeat;
     flex: 1;
     transition: 0.9s all ease;
+    
   }
 
   .card1:hover, .card2:hover, .card3:hover {
@@ -221,11 +222,7 @@
       padding: 8px 18px;
     }
   
-    /* Układ w kolumnie na mniejszych ekranach */
-    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
-      flex-direction: column;
-      gap: 10px;
-    }
+
   }
   
   @media (max-width: 1024px) {
@@ -244,17 +241,18 @@
       padding: 6px 15px;
     }
   
-    /* Zmniejszenie odstępów między kartami */
-    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
-      flex-direction: column;
-      gap: 5px;
-    }
+
   }
   
   @media (max-width: 768px) {
-    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+    .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
       width: 180px;
       height: 150px;
+    }
+
+    .card1, .card2, .card3 {
+        width: 100%;
+        height: 150px;
     }
   
     .card1 button, .card2 button, .card3 button,
@@ -272,15 +270,23 @@
       flex-direction: column;
       gap: 3px;
     }
+
+    .card1 button , .card2 button, .card3 button{
+        transform: translate(-50%, -300%); /* Przesunięcie przycisku*/
+    }
   }
   
   @media (max-width: 480px) {
-    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+    .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
       width: 150px;
       height: 120px;
     }
-  
-    .card1 button, .card2 button, .card3 button,
+
+    .card1, .card2, .card3 {
+        width: 100%;
+        height: 150px;
+    }
+    
     .card4 button, .card5 button, .card6 button,
     .card7 button, .card8 button, .card9 button,
     .card10 button, .card11 button, .card12 button,
@@ -290,9 +296,8 @@
       padding: 4px 10px;
     }
   
-    /* Karty w jednej kolumnie */
-    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
-      flex-direction: column;
-      gap: 1px;
+    .card1 button , .card2 button, .card3 button{
+        transform: translate(-50%, -300%); /* Przesunięcie przycisku*/
     }
+
   }
