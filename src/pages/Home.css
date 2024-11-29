@@ -4,7 +4,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif; /* Czcionka w stylu cukierni */
   background-color: #f7f1e1; /* Kolor tła przypominający ciasto */
   color: #333;
 }
@@ -33,7 +32,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #e7a12e; 
 }
 
@@ -47,8 +46,8 @@ body {
 .l1 {
   padding: 30px;
   text-align: center;
-  font-size: large;
-  font-family: 'Pacifico', cursive ;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -74,7 +73,7 @@ body {
   font-size: 2rem;
   text-align: center;
   color: #6c4f1f; 
-  font-family: 'Lobster', cursive; /* Stylizowana czcionka dla tytułów */
+  font-family: 'Pacifico', cursive ;
   margin-bottom: 20px;
 }
 
@@ -83,7 +82,7 @@ body {
   padding: 30px;
   text-align: left;
   font-size: large;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /*Sekcja unikalneWypieki*/
@@ -97,7 +96,7 @@ body {
   padding: 30px;
   text-align: left;
   font-size: large;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .unikalneWypieki .service-list2 h3 {
@@ -108,7 +107,7 @@ body {
   margin-right: 15px;
   content: '\2023';
   color: #6c4f1f; 
-  font-size: 1.3rem; 
+  font-size: 1rem; 
 }
 
 
@@ -167,16 +166,17 @@ body {
   padding: 30px;
   text-align: left;
   font-size: large;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .containerInfo {
-  width: 99%;
+  width: 98%;
   display: flex;
   gap: 20px; /* Odstęp między kartami */
   justify-content: center; /* Wyrównanie kart na środku */
   align-items: center; /* Wyrównanie w pionie */
   padding: 10px;
+  
 }
 
 /* Nowy układ kart w .containerInfo */
@@ -195,14 +195,14 @@ body {
   padding: 30px;
   text-align: center;
   font-size: x-large;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .info-opis-media {
   padding: 30px;
   text-align: center;
   font-size: large;
-  font-family: 'Pacifico', cursive ;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 /* Responsywność */
@@ -239,7 +239,7 @@ body {
   .home-page {
     font-family: 'Merriweather', serif;
   }
-  
+
   .menu-cont {
     height: 30vh; /* Mniejsza wysokość na tabletach */
     background-size: cover;
@@ -329,7 +329,7 @@ body {
 
 @media (max-width: 480px) {
   .home-page {
-    font-family: 'Merriweather', serif;
+    font-family: f;
   }
 
   .menu-cont {
@@ -370,7 +370,14 @@ body {
 
   .service-list, .service-list2 {
     font-size: 1rem;
+
   }
+
+  .service-list2 {
+
+    text-align: center;
+  }
+
 
   .info-tytul-media, .info-opis-media {
     font-size: 1rem;

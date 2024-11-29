@@ -287,14 +287,19 @@
         height: 150px;
     }
     
-    .card4 button, .card5 button, .card6 button,
+    .card6 button,
     .card7 button, .card8 button, .card9 button,
-    .card10 button, .card11 button, .card12 button,
-    .card13 button, .card14 button, .card15 button,
+    .card10 button, .card11 button, 
     .card16 button, .card17 button {
       font-size: 0.7rem;
       padding: 4px 10px;
     }
+      
+    .card4 button, .card5 button, .card12 button,
+    .card13 button, .card14 button, .card15 button{
+        font-size: 0.6rem;
+    }
+
   
     .card1 button , .card2 button, .card3 button{
         transform: translate(-50%, -300%); /* Przesunięcie przycisku*/
