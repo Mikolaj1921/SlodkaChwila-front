@@ -105,6 +105,7 @@ const Home = () => {
             niezapomnianymi smakami, które pasują do każdej okazji i pory roku.
           </h3>
         </ul>
+        
         <h2 className="subtitle">Wiosna: Świeże i Owocowe Inspiracje</h2>
         <ul className="service-list2">
           <h3>
@@ -164,8 +165,6 @@ const Home = () => {
           także ciasta z dodatkiem alkoholu, które wprowadzają w świąteczny nastrój.
           Oferujemy również świąteczne pączki i karnawałowe przysmaki, które umilą Ci
           zimowe dni i święta.
-
-          Nasze sezonowe wypieki to nie tylko pyszne ciasta, ale także wspomnienia i emocje, które towarzyszą każdej porze roku. Dzięki świeżym, lokalnym składnikom i naszym unikalnym przepisom, każdy sezon staje się okazją, by rozkoszować się nowymi smakami. SłodkaChwila to miejsce, gdzie pasja do pieczenia spotyka się z miłością do sezonowych smaków. Zapraszamy do naszej cukierni, by spróbować wypieków, które zmieniają się wraz z porami roku – zrób sobie słodką chwilę każdego dnia!
 
           </h3>
         </ul>
@@ -238,7 +237,7 @@ const Home = () => {
 
           <div className='containerOpisNapoje'>
             <div className='opisZima'>
-              <h3 className="TytulSeason">Zima – Rozgrzewająca Magia</h3>
+              <h3 className="TytulSeason">Zima – Rozgrze- wająca Magia</h3>
               <h3>W chłodne, zimowe dni oferujemy napoje, które nie tylko rozgrzewają, ale także wprowadzają w świąteczny nastrój.
                 Piernikowe latte – kawa z nutą przypraw korzennych, cynamonu i miodu.
                 Czekolada na gorąco z chilli – kremowa, z lekką ostrością, która dodaje energii.
