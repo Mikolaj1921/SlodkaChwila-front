@@ -1,16 +1,8 @@
 import React from 'react';
-import './Home.css'; // Importujemy zaktualizowane style
+import './Home.css';
+import './Homecards.css';
 //import { Container } from 'postcss';
 //import backgroundImage from '../components/images/dohome.jpg';
-
-//Górne tło pod nagłówkiem(przewijanie się zależne od scroolingu)
-window.addEventListener('scroll', function() {
-  const scrollPosition = window.scrollY; // Pobieranie pozycji scrolla
-  const menuCont = document.querySelector('.menu-cont');
-  
-  // Zmieniamy pozycję tła w zależności od scrolla
-  menuCont.style.backgroundPosition = `center ${50 - scrollPosition * 0.02}%`;
-});
 
 
 const Home = () => {
@@ -34,7 +26,7 @@ const Home = () => {
           ciasteczek i innych pyszności, które łączą tradycję z nowoczesnymi smakami.</h3>
           Nasze wypieki powstają z najlepszych składników, co gwarantuje ich
           niezrównany smak i jakość.</div>
-        <div className="containerWypieki">
+        <div className="containerInfo">
           <div className="card1">
             <button>Ciasta na każdą okazję</button>
           </div>
@@ -90,7 +82,7 @@ const Home = () => {
           </h3>
         </ul>
 
-        <ul className="containerWypieki2">
+        <ul className="containerInfo">
           <div className="card4">
             <button>Cukierki i praliny</button>
           </div>
@@ -123,7 +115,7 @@ const Home = () => {
             zmysłów, które wprowadzą Cię w radosny, pełen energii nastrój.
           </h3>
         </ul>
-        <ul className="containerWypieki3">
+        <ul className="containerInfo">
           <div className="card6">
             <button>Odkryj wiosenne smaki Słodkiej Chwili</button>
           </div>
@@ -139,7 +131,7 @@ const Home = () => {
             i pikników.
           </h3>
         </ul>
-        <ul className="containerWypieki3">
+        <ul className="containerInfo">
           <div className="card7">
             <button>Odkryj letnie orzeźwiające smaki Słodkiej Chwili</button>
           </div>
@@ -156,7 +148,7 @@ const Home = () => {
           ciasta z orzechami, które świetnie komponują się z filiżanką ciepłej herbaty.
           </h3>
         </ul>
-        <ul className="containerWypieki3">
+        <ul className="containerInfo">
           <div className="card8">
             <button>Odkryj jesienne rozgrzewające smaki Słodkiej Chwili</button>
           </div>
@@ -177,7 +169,7 @@ const Home = () => {
 
           </h3>
         </ul>
-        <ul className="containerWypieki3">
+        <ul className="containerInfo">
           <div className="card9">
             <button>Odkryj zimowe smaki Słodkiej Chwili</button>
           </div>
@@ -196,7 +188,7 @@ const Home = () => {
           roku – zrób sobie słodką chwilę każdego dnia!
           </h3>
         </ul>
-        <ul className="containerWypieki3">
+        <ul className="containerInfo">
           <div className="card10">
             <button>Sezonowe wypieki</button>
           </div>
@@ -220,7 +212,7 @@ const Home = () => {
             chwilę relaksu, która pozwala zwolnić tempo i cieszyć się chwilą.
             </h3>
           </ul>
-          <ul className="containerWypieki3">
+          <ul className="containerInfo">
             <div className="card11">
               <button>Napoje SłodkaChwila</button>
             </div>
@@ -234,7 +226,7 @@ const Home = () => {
             sezon staje się okazją do odkrywania nowych ulubionych napojów. To coś więcej niż zwykły
             napój – to uczta dla zmysłów i sposób na celebrację chwili.</h3>
           </ul>
-          <ul className="containerNapoje">
+          <ul className="containerInfo">
             <div className="card12">
               <button>Napoje Zimowe</button>
               
@@ -260,7 +252,7 @@ const Home = () => {
                   Lemoniada z kwiatem bzu – subtelna, z odrobiną wiosennej słodyczy.</h3>
             </div>
           </div>
-          <ul className="containerNapoje">
+          <ul className="containerInfo">
             <div className="card14">
               <button>Napoje Letnie</button>
               

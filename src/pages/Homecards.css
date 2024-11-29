@@ -1,0 +1,298 @@
+.card1, .card2, .card3 {
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    background: url('../components/images/menu.jpg') center/cover no-repeat;
+    flex: 1;
+    transition: 0.9s all ease;
+  }
+
+  .card1:hover, .card2:hover, .card3:hover {
+    flex: 2;
+    transform: scale(1);
+  }
+  
+  .card1 button , .card2 button, .card3 button{
+    position: relative; /* Pozycjonowanie */
+    top: 115%; /* Ustawienie przycisku w pionie */
+    left: 50%; /* Ustawienie przycisku w poziomie */
+    transform: translate(-50%, -50%); /* Przesunięcie przycisku*/
+    padding: 10px 20px; /*wymiary przycisku*/
+    background-color: #e7a02e96; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; /* Zaokrąglone rogi */
+    font-size: 1rem; 
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    transition: background-color 0.3s ease; /* Płynna zmiana koloru tła */
+  }
+  
+  .card1 button:hover,.card2 button:hover,.card3 button:hover { background-color: #6c4f1f; }
+  
+  .card2 { background: url('../components/images/ciasteczka.jpg') center/cover no-repeat; }
+  .card2 button { background-color: #ba7934;}
+  
+  .card3 { background: url('../components/images/bezglutenowe.jpg') center/cover no-repeat; }
+  
+  
+
+
+
+
+  /*Czekolady i cukierki*/
+  .card4,.card5 {
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 250px;
+    background: url('../components/images/pralinycukierkiB.jpg') center/cover no-repeat;
+    flex: 1;
+    transition: 0.9s all ease;
+  }
+
+  .card4:hover,.card5:hover {
+    flex: 2;
+    transform: scale(1);
+  }
+  
+  .card4 button,.card5 button {
+    position: relative; 
+    top: 115%; 
+    left: 50%; 
+    transform: translate(-50%, -400%); 
+    padding: 10px 50px; 
+    background-color: #e7a02e96; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .card4 button:hover,.card5 button:hover { background-color: #6c4f1f; }
+  
+  .card5 { background: url('../components/images/czekoladyB.jpg') center/cover no-repeat; }
+  .card5 button { padding: 10px 75px; }
+  
+
+
+
+
+
+  /*Sezonowe wypieki*/
+  .card6,.card7,.card8,.card9,.card10,.card11 {
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 250px;
+    background: url('../components/images/wiosna.jpg') center/cover no-repeat;
+    flex: 1;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  
+  .card6 button, .card7 button, .card8 button, .card9 button, .card10 button, .card11 button {
+    position: relative; 
+    top: 115%; 
+    left: 50%; 
+    transform: translate(-50%, -400%); 
+    padding: 10px 150px; 
+    background-color: #e7a02e96; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .card6 button:hover , .card7 button:hover,.card8 button:hover,.card9 button:hover,
+  .card10 button:hover,.card11 button:hover {
+    background-color: #6c4f1f; 
+  }
+  
+  
+  .card7 { background: url('../components/images/lato.jpg') center/cover no-repeat; }
+  .card8 { background: url('../components/images/jesien.jpg') center/cover no-repeat; }
+  .card9 { background: url('../components/images/zima.jpg') center/cover no-repeat; }
+  .card10 { background: url('../components/images/season.jpg') center/cover no-repeat; }
+  .card11 { background: url('../components/images/drinks.jpg') center/cover no-repeat; }
+  
+
+
+
+  /*Sezonowe napoje*/
+  .card12,.card13,.card14,.card15 {
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 250px;
+    background: url('../components/images/zimowe.jpg') center/cover no-repeat;
+    flex: 1;
+    transition: 0.9s all ease;
+  }
+
+  .card12:hover, .card13:hover, .card14:hover, .card15:hover {
+    flex: 2;
+    transform: scale(1);
+  }
+  
+  .card12 button, .card13 button, .card14 button, .card15 button {
+    position: relative; 
+    top: 115%; 
+    left: 50%; 
+    transform: translate(-50%, -400%); 
+    padding: 10px 75px; 
+    background-color: #e7a02ec0; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .card12 button:hover, .card13 button:hover, .card14 button:hover, .card15 button:hover {
+    background-color: #6c4f1f; 
+  }
+  
+  .card13 { background: url('../components/images/wiosenne.jpg') center/cover no-repeat;}
+  .card14 { background: url('../components/images/letnie.jpg') center/cover no-repeat; }
+  .card15 { background: url('../components/images/jesienne.jpg') center/cover no-repeat; }
+
+
+
+
+  /*Sekcja Informacje*/
+  .card16,.card17 {
+    border-radius: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 250px;
+    background: url('../components/images/kontakt.jpg') center/cover no-repeat;
+    flex: 1;
+    transition: 0.9s all ease;
+  }
+
+  .card16:hover, .card17:hover {
+    flex: 2;
+    transform: scale(1);
+  }
+  
+  .card16 button, .card17 button {
+    position: relative; 
+    top: 115%; 
+    left: 50%; 
+    transform: translate(-50%, -400%); 
+    padding: 10px 100px; 
+    background-color: #e7a02ec0;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .card16 button:hover,  .card17 button:hover {
+    background-color: #6c4f1f; 
+  }
+  
+  .card17 { background: url('../components/images/aktualnosci.jpg') center/cover no-repeat; }
+
+
+/* Responsywność */
+@media (max-width: 1200px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+      width: 250px;
+      height: 200px;
+      margin-left: 10px;
+    }
+  
+    .card1 button, .card2 button, .card3 button,
+    .card4 button, .card5 button, .card6 button,
+    .card7 button, .card8 button, .card9 button,
+    .card10 button, .card11 button, .card12 button,
+    .card13 button, .card14 button, .card15 button,
+    .card16 button, .card17 button {
+      font-size: 0.9rem;
+      padding: 8px 18px;
+    }
+  
+    /* Układ w kolumnie na mniejszych ekranach */
+    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+      width: 220px;
+      height: 180px;
+    }
+  
+    .card1 button, .card2 button, .card3 button,
+    .card4 button, .card5 button, .card6 button,
+    .card7 button, .card8 button, .card9 button,
+    .card10 button, .card11 button, .card12 button,
+    .card13 button, .card14 button, .card15 button,
+    .card16 button, .card17 button {
+      font-size: 0.85rem;
+      padding: 6px 15px;
+    }
+  
+    /* Zmniejszenie odstępów między kartami */
+    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+      width: 180px;
+      height: 150px;
+    }
+  
+    .card1 button, .card2 button, .card3 button,
+    .card4 button, .card5 button, .card6 button,
+    .card7 button, .card8 button, .card9 button,
+    .card10 button, .card11 button, .card12 button,
+    .card13 button, .card14 button, .card15 button,
+    .card16 button, .card17 button {
+      font-size: 0.75rem;
+      padding: 5px 12px;
+    }
+  
+    /* Zmniejszenie odstępów między kartami */
+    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8, .card9, .card10, .card11, .card12, .card13, .card14, .card15, .card16, .card17 {
+      width: 150px;
+      height: 120px;
+    }
+  
+    .card1 button, .card2 button, .card3 button,
+    .card4 button, .card5 button, .card6 button,
+    .card7 button, .card8 button, .card9 button,
+    .card10 button, .card11 button, .card12 button,
+    .card13 button, .card14 button, .card15 button,
+    .card16 button, .card17 button {
+      font-size: 0.7rem;
+      padding: 4px 10px;
+    }
+  
+    /* Karty w jednej kolumnie */
+    .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
+      flex-direction: column;
+      gap: 1px;
+    }
+  }
