@@ -175,6 +175,7 @@
     background: url('../components/images/kontakt.jpg') center/cover no-repeat;
     flex: 1;
     transition: 0.9s all ease;
+    position: relative;
   }
 
   .card16:hover, .card17:hover {
@@ -182,11 +183,12 @@
     transform: scale(1);
   }
   
-  .card16 button, .card17 button {
-    position: relative; 
-    top: 115%; 
-    left: 50%; 
-    transform: translate(-50%, -400%); 
+
+  .buttoninfo{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
     padding: 10px 100px; 
     background-color: #e7a02ec0;
     color: white; 
@@ -197,7 +199,7 @@
     transition: background-color 0.3s ease; 
   }
   
-  .card16 button:hover,  .card17 button:hover {
+  .buttoninfo:hover{
     background-color: #6c4f1f; 
   }
   
@@ -216,12 +218,17 @@
     .card4 button, .card5 button, .card6 button,
     .card7 button, .card8 button, .card9 button,
     .card10 button, .card11 button, .card12 button,
-    .card13 button, .card14 button, .card15 button,
-    .card16 button, .card17 button {
+    .card13 button, .card14 button, .card15 button, .buttoninfo
+    {
       font-size: 0.9rem;
       padding: 8px 18px;
     }
-  
+
+    .buttoninfo{
+      font-size: 0.9rem;
+      padding: 8px 18px;
+
+    }
 
   }
   
@@ -235,12 +242,16 @@
     .card4 button, .card5 button, .card6 button,
     .card7 button, .card8 button, .card9 button,
     .card10 button, .card11 button, .card12 button,
-    .card13 button, .card14 button, .card15 button,
-    .card16 button, .card17 button {
+    .card13 button, .card14 button, .card15 button, .buttoninfo
+    {
       font-size: 0.85rem;
       padding: 6px 15px;
     }
   
+    .buttoninfo{
+      font-size: 0.85rem;
+      padding: 6px 15px;
+    }
 
   }
   
@@ -259,11 +270,12 @@
     .card4 button, .card5 button, .card6 button,
     .card7 button, .card8 button, .card9 button,
     .card10 button, .card11 button, .card12 button,
-    .card13 button, .card14 button, .card15 button,
-    .card16 button, .card17 button {
+    .card13 button, .card14 button, .card15 button, .buttoninfo
+    {
       font-size: 0.75rem;
       padding: 5px 12px;
     }
+
   
     /* Zmniejszenie odstępów między kartami */
     .containerWypieki, .containerWypieki2, .containerWypieki3, .containerNapoje {
@@ -289,12 +301,12 @@
     
     .card6 button,
     .card7 button, .card8 button, .card9 button,
-    .card10 button, .card11 button, 
-    .card16 button, .card17 button {
+    .card10 button, .card11 button, .buttoninfo
+    {
       font-size: 0.7rem;
       padding: 4px 10px;
     }
-      
+
     .card4 button, .card5 button, .card12 button,
     .card13 button, .card14 button, .card15 button{
         font-size: 0.6rem;

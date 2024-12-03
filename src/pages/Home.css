@@ -1,21 +1,24 @@
-/* Ustawienie body na 100% wysokości i szerokości */
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f7f1e1; /* Kolor tła przypominający ciasto */
+  background: #f7f1e1;
   color: #333;
-}
+} 
 
 .menu-cont {
   position: relative;
   height: 40vh;
-  background: linear-gradient(to bottom, rgba(233, 171, 0, 0), #f7f1e1 90%), 
-              url('../components/images/dohome.jpg');
+  background:
+  linear-gradient(to bottom, rgba(233, 171, 0, 0), #f7f1e1 90%),
+  url('../components/images/dohome.jpg');
+
   background-size: cover;
   background-position: center;
 }
+
+
 
 .title-names {
   padding: 55px;
@@ -40,14 +43,18 @@ body {
   min-height: 30vh;
   z-index: 1;
   padding: 20px;
+  
 }
+
 
 /* tekst do napisu nasze wypieki*/
 .l1 {
+  font-weight: 200;
   padding: 30px;
   text-align: center;
-  font-size: x-large;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #38270b9c;
 }
 
 
@@ -56,6 +63,11 @@ body {
   background-color: #fff3e3; /* Kolor przypominający kremy w ciastkach */
   padding: 40px;
   margin-top: 30px;
+  background: 
+
+  linear-gradient(to right, rgba(233, 171, 0, 0), #f7f1e1 99%),
+  rgba(231, 160, 46, 0.079);
+
 }
 
 .why-us-section .service-list h3 {
@@ -75,6 +87,16 @@ body {
   color: #6c4f1f; 
   font-family: 'Pacifico', cursive ;
   margin-bottom: 20px;
+  
+}
+
+.section-title-other {
+  font-size: 2rem;
+  text-align: center;
+  color: #6c4f1f; 
+  font-family: 'Pacifico', cursive ;
+  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 /* Lista wypieków */
@@ -83,6 +105,7 @@ body {
   text-align: left;
   font-size: large;
   font-family: 'Times New Roman', Times, serif;
+  
 }
 
 /*Sekcja unikalneWypieki*/
@@ -97,6 +120,7 @@ body {
   text-align: left;
   font-size: large;
   font-family: 'Times New Roman', Times, serif;
+
 }
 
 .unikalneWypieki .service-list2 h3 {
@@ -130,6 +154,7 @@ body {
   text-align: center;
   font-size: x-large;
   font-family: 'Pacifico', cursive ;
+  padding-top: 25px;
 }
 
 
@@ -150,7 +175,11 @@ body {
 
 /*Sekcja informacje*/
 .informacje {
-  background-color: #6c4f1f13;
+  
+  /*background-color: #6c4f1f13;*/
+  background:#6c4f1f13
+  linear-gradient(to bottom, #f7f1e1, #6c4f1f04 70%);
+
 }
 
 .section-title-info {
@@ -170,7 +199,7 @@ body {
 }
 
 .containerInfo {
-  width: 98%;
+  width: 98.5%;
   display: flex;
   gap: 20px; /* Odstęp między kartami */
   justify-content: center; /* Wyrównanie kart na środku */
@@ -192,18 +221,93 @@ body {
 
 
 .info-tytul-media {
-  padding: 30px;
+  padding-top: 90px;
+  padding-bottom: 30px;
   text-align: center;
   font-size: x-large;
   font-family: 'Times New Roman', Times, serif;
+  transition: 0.9s ease;
 }
 
-.info-opis-media {
-  padding: 30px;
-  text-align: center;
-  font-size: large;
-  font-family: 'Times New Roman', Times, serif;
+
+
+
+
+
+
+/* Stylizacja dla kontenera z ikonami społecznościowymi */
+.social-icons {
+  padding-top: 50px ;
+  padding-bottom: 40px;
+  position: relative;
+  top: 50%; /* Wyrównanie kontenera w pionie */
+  left: 50%; /* Wyrównanie kontenera w poziomie */
+  transform: translate(-50%, -50%); /* Przesunięcie kontenera, aby był dokładnie wyśrodkowany */
+  width: 200px; /* Szerokość paska */
+  flex: 1;
+  transition: 0.9s ease; /* Animacja zmiany szerokości */
 }
+
+/* Stylizacja w przypadku rozszerzenia paska */
+.social-icons:hover {
+  width: 220px;
+
+}
+
+/* Lista ikon społecznościowych */
+.social-icons ul {
+  background-color: #33333310;
+  border-radius: 10px 10px 10px 10px;
+  list-style: none; /* Usunięcie punktów listy */
+  padding: 0; /* Usunięcie paddingu */
+  margin: 0; /* Usunięcie marginesu */
+  display: flex; /* Flexbox dla elastycznego rozmieszczenia elementów */
+  flex-direction: row; /* Ustawienie elementów w jednym wierszu */
+  justify-content: space-between; /* Równomierne rozmieszczenie ikon na dostępnej przestrzeni */
+  align-items: center; /* Wyrównanie ikon w pionie w środku */
+  width: 100%; /* Ustalamy szerokość listy na 100%, aby rozciągnęła się na całą szerokość kontenera */
+}
+
+/* Stylizacja dla pojedynczego elementu listy */
+.social-icons ul li {
+  margin: 0 10px; /* Odstępy między ikonami */
+  transition: transform 0.3s ease;
+}
+
+/* Stylizacja linków w ikonach społecznościowych */
+.social-icons ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* Stylizacja na hover (najechanie kursorem) */
+.social-icons ul li a:hover {
+  color: #e7a02e; /* Kolor ikony po najechaniu */
+}
+
+/* Stylizacja ikon (elementy <i>) */
+.social-icons ul li i {
+  display: inline-block;
+  transition: transform 0.3s ease; /* Animacja dla ikon */
+}
+
+/* Zwiększenie rozmiaru całego kontenera po najechaniu */
+.social-icons:hover {
+  transform: translate(-50%, -50%) scale(1.1); /* Powiększenie kontenera */
+}
+
+/* Zwiększenie rozmiaru ikon po najechaniu */
+.social-icons ul li i:hover {
+  transform: scale(1.3); /* Powiększenie ikon */
+}
+
+
+
+
+
+
 
 /* Responsywność */
 @media (max-width: 1200px) {
