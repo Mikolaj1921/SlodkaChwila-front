@@ -88,6 +88,7 @@ const Menu = () => {
           </div>    
         </div>
         
+        
         <div className="ZmianaMenu">
               <button className="Lewo" onClick={goToPrev}></button>
               <button className="Prawo" onClick={goToNext}></button>
