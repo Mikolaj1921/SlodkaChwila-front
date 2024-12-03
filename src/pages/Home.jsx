@@ -1,11 +1,19 @@
-import React from 'react';
+
+import React from 'react';  // Import useState here
 import './Home.css';
 import './Homecards.css';
-//import { Container } from 'postcss';
-//import backgroundImage from '../components/images/dohome.jpg';
+import {useNavigate, Link } from 'react-router-dom';
 
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
+  const goToSection = (sectionId) => {
+    navigate(`/menu`, { state: { targetSection: sectionId } }); // Przekazuje ID sekcji
+  };
+
+
   return (
     <div className="home-page">
       <div className="menu-cont">
@@ -20,21 +28,27 @@ const Home = () => {
       <section className="about-section">
         <h2 className="section-title">Nasze wypieki</h2>
         <div className="l1">
-          <h3>Zapraszamy do świata pełnego wyjątkowych smaków, aromatów i pasji,
-          które zawdzięczamy naszym starannie przygotowanym wypiekom.</h3>
-          <h3>W naszej ofercie znajdziesz szeroki wybór świeżych, domowych ciast,
-          ciasteczek i innych pyszności, które łączą tradycję z nowoczesnymi smakami.</h3>
+          <h3>Zapraszamy do świata pełnego wyjątkowych smaków, aromatów i pasji,</h3>
+          <h3>które zawdzięczamy naszym starannie przygotowanym wypiekom.</h3>
+          <h3>W naszej ofercie znajdziesz szeroki wybór świeżych, domowych ciast,</h3>
+          <h3>ciasteczek i innych pyszności, które łączą tradycję z nowoczesnymi smakami.</h3>
           Nasze wypieki powstają z najlepszych składników, co gwarantuje ich
           niezrównany smak i jakość.</div>
         <div className="containerInfo1">
           <div className="card1">
-            <button>Ciasta na każdą okazję</button>
+            <button onClick={() => goToSection('CiastaNaKazdaOkazje')}>
+              Ciasta na każdą okazję
+            </button>
           </div>
           <div className="card2">
-            <button>Świeże ciasteczka i ciasteczka</button>
+            <button onClick={() => goToSection('Świeże ciasteczka')}>
+              Świeże ciasteczka
+            </button>
           </div>
           <div className="card3">
-            <button>Desery bezglutenowe</button>
+            <button onClick={() => goToSection('DeseryBezglutenowe')}>
+              Desery bezglutenowe
+            </button>
           </div>
 
         </div>
@@ -45,22 +59,13 @@ const Home = () => {
         <h2 className="section-title">Dlaczego warto wybrać naszą ciastkarnię?</h2>
         <ul className="service-list">
           <h3>Świeżość i naturalność – Wszystkie nasze ciasta, ciasteczka i wypieki
-            przygotowujemy na bieżąco, używając wyłącznie świeżych i naturalnych składników.
-            Dzięki temu możesz być pewien, że każdy kęs to prawdziwa uczta smakowa.</h3>
+            przygotowujemy na bieżąco.</h3>
           <h3>Tradycja z nutą nowoczesności – Nasze wypieki to połączenie tradycyjnych receptur,
-            które znamy i kochamy, z nowoczesnymi pomysłami i unikalnymi smakami.
-            Każde ciasto jest przygotowane z dbałością o detale, a ich wygląd sprawia,
-            że nie możesz się oprzeć, by spróbować ich jak najszybciej.</h3>
-          <h3>Idealne na każdą okazję – Niezależnie od tego, czy planujesz małą uroczystość,
-            rodzinne spotkanie, czy po prostu chcesz rozpieścić siebie i swoich bliskich
-            – nasze wypieki będą doskonałym wyborem. W ofercie mamy zarówno klasyczne ciasta,
-            jak i te bardziej wyszukane, które zachwycą nawet najbardziej wymagających smakoszy.</h3>
+            które znamy i kochamy.</h3>
           <h3>Pyszne smaki i aromaty – Czekoladowe, owocowe, karmelowe, orzechowe – u nas
-            znajdziesz wypieki, które zaspokoją każde kulinarne pragnienie. Nasze wypieki
-            są pełne smaku, aromatu i pasji, które w każdym kawałku przenoszą Cię do raju smaków.</h3>
+            znajdziesz wypieki, które zaspokoją każde kulinarne pragnienie.</h3>
           <h3>Ręczna produkcja – Każdy nasz wypiek jest robiony z sercem, ręcznie, z dbałością
-            o każdy detal. Dzięki temu mamy pewność, że nasze produkty są nie tylko smaczne,
-            ale i unikalne.</h3>
+            o każdy detal.</h3>
         </ul>
       </section>
 
@@ -217,7 +222,7 @@ const Home = () => {
             </div>
           </ul>
 
-          <h2 className="section-title">Seasonowe napoje SłodkiejChwili</h2>
+          <h2 className="section-title-other">Seasonowe napoje SłodkiejChwili</h2>
           <ul className="service-list2">
             <h3>
             Sezonowe napoje w SłodkiejChwili to wyjątkowe kompozycje inspirowane zmieniającymi się
@@ -237,7 +242,7 @@ const Home = () => {
 
           <div className='containerOpisNapoje'>
             <div className='opisZima'>
-              <h3 className="TytulSeason">Zima – Rozgrze- wająca Magia</h3>
+              <h3 className="TytulSeason">Zimowa Magia</h3>
               <h3>W chłodne, zimowe dni oferujemy napoje, które nie tylko rozgrzewają, ale także wprowadzają w świąteczny nastrój.
                 Piernikowe latte – kawa z nutą przypraw korzennych, cynamonu i miodu.
                 Czekolada na gorąco z chilli – kremowa, z lekką ostrością, która dodaje energii.
@@ -282,29 +287,61 @@ const Home = () => {
       <section className="informacje">
         <h2 className="section-title-info">Informacje o nas</h2>
         <ul className="info-opis">
-          <h3>
-            Słodka Chwila to miejsce, w którym każdy kęs to prawdziwa przyjemność. Nasza cukiernia powstała z pasji do pieczenia i miłości do wyjątkowych smaków. Stawiamy na jakość i świeżość składników, dlatego w naszych wypiekach znajdziesz tylko najlepsze produkty, pochodzące od lokalnych dostawców. Chcemy, aby każda chwila spędzona w Słodkiej Chwili była pełna radości, dlatego nasza oferta zmienia się zgodnie z porami roku, oferując zawsze coś świeżego, pysznego i w pełni dopasowanego do nastroju każdej pory roku.
-           </h3><h3> W Słodkiej Chwili znajdziesz szeroką gamę wypieków – od klasycznych ciast, przez kreatywne torty, aż po małe słodkości idealne na prezent czy do podzielenia się z bliskimi. Nasze ciasta są przygotowywane z miłością, aby dostarczyć Ci niezapomnianych smaków, które otulą Cię w każdej chwili. Dzięki wyjątkowym recepturom i unikalnym połączeniom smakowym nasze wypieki to nie tylko jedzenie – to prawdziwa przyjemność, którą warto dzielić.
-           </h3><h3>Słodka Chwila to także przestrzeń, w której można spędzić czas w miłej atmosferze, pijąc aromatyczną kawę i delektując się słodkościami w towarzystwie bliskich. Nasza cukiernia to więcej niż miejsce na szybki deser – to przestrzeń pełna inspiracji i smaków, które na długo pozostaną w pamięci.
-           </h3><h3>Dołącz do nas i zrób sobie słodką chwilę w ciągu dnia!
+          
+          <h3> Słodka Chwila to miejsce, w którym każdy kęs to prawdziwa przyjemność. </h3>
+
+          <h3> W Słodkiej Chwili znajdziesz szeroką gamę wypieków – od klasycznych ciast,
+            przez kreatywne torty, aż po małe słodkości idealne na prezent czy do podzielenia się
+            z bliskimi. Nasze ciasta są przygotowywane z miłością, aby dostarczyć Ci niezapomnianych
+            smaków, które otulą Cię w każdej chwili. Dzięki wyjątkowym recepturom i unikalnym
+            połączeniom smakowym nasze wypieki to nie tylko jedzenie – to prawdziwa przyjemność,
+            którą warto dzielić.
           </h3>
+          
+          <h3>Dołącz do nas i zrób sobie słodką chwilę w ciągu dnia!</h3>
+          
         </ul>
         <ul className="containerInfo">
             <div className="card16">
-              <button>Kontakt</button>
+              <Link to="/contact" className="buttoninfo">
+                Kontakt
+              </Link>
+              
             </div>
 
             <div className="card17">
-              <button>Aktualności</button> 
+              <Link to="/news" className="buttoninfo">
+                Aktualnosci
+              </Link>
             </div>
         </ul>
         <ul className="info-tytul-media">
           <h3>Zaobserwój nas na mediach społecznościowych:</h3>
         </ul>
-        <ul className="info-opis-media">
-          <h3><strong>Instagram:</strong> slodkachwila_rzeszow</h3>
-          <h3><strong>Facebook:</strong> SlodkaChwila Rzeszow</h3>
-        </ul>
+
+
+        {/* social media*/}
+        <div className="social-icons">
+          <ul>
+            <li>
+              <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-tiktok"></i> {/* TikTok Icon */}
+              </a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-x-twitter"></i> {/* Twitter Icon */}
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <i className="fa-brands fa-instagram"></i> {/* Instagram Icon */}
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+
       </section>
     </div>
   );

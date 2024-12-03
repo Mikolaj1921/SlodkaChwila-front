@@ -1,27 +1,30 @@
+
+
 .menu-container {
   position: relative;
   height: 100vh;
+  background:  linear-gradient(to bottom, rgba(233, 171, 0, 0), #ffffff 90%),
+   url('../components/images/menu.jpg');
   background-size: cover;
   background-position: center;
-  filter: blur(2px); /* Rozmycie tła */
-  z-index: -1000;
 }
 
 .menu-text {
-  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  width: 24%;
+  height: 20px;
   top: 50%;
   left: 50%;
-  transform: translate(100%, -50%);
-  color: white;
+  transform: translate(280%, 500%);
+  color: rgb(255, 255, 255);
   text-align: left ;
-
+  font-size: medium;
 }
 
-
 .menu-title {
-  font-size: 30pt;
-  color: black;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+  font-family: 'Pacifico', cursive;
   padding-bottom: 10px;
   text-align: start; /* Wyśrodkowanie tekstu */
   position: relative; /* Potrzebne dla ::after */
@@ -36,9 +39,7 @@
   margin: 10px auto 0; /* Odstępy i wyśrodkowanie linii */
 }
 
-
 .menu-text p {
-  font-size: medium;
   color: black;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -47,36 +48,95 @@
 
 
 
+
 /* Sekcja słodkich naleśników */
 .slodkie {
+  background: linear-gradient(to bottom, rgba(233, 171, 0, 0.075), #f7f1e1 99%);
+  align-items: center;
+}
+
+.Naglowek {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #6c4f1f; 
+  font-family: 'Pacifico', cursive; 
+}
+
+
+/* Pojedynczy element "naleśnik z serem" */
+.PositionMenuFirst {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.048), #f7f1e1 99%);
   display: flex;
   align-items: center;
-  margin:50px 0;
+  padding: 50px;
+  width: 100%;
 }
 
 /* Pojedynczy element "naleśnik z serem" */
-.NalesnikZSerem {
+.PositionMenuEnd {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.048), #f7f1e1 99%);
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Wyrównanie pionowe */
-  padding: 70px;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+}
+
+/* Pojedynczy element "naleśnik z serem" */
+.PositionMenuLeft {
+  background: linear-gradient(to left, rgba(233, 171, 0, 0.048), #f7f1e1 99%);
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+}
+
+/* Pojedynczy element "naleśnik z serem" */
+.PositionMenuRight {
+  background: linear-gradient(to right, rgba(233, 171, 0, 0.048), #f7f1e1 99%);
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
 }
 
 /* Tło naleśników */
-.nalesniki {
-
+.nalesniki , .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD{
+  background: url('../components/images/nalesniki.jpg');
   width: 400px;
   height: 300px;
   background-size: cover;
   background-position: center;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-image: none; /* Zapewnia wyświetlanie tła */
   flex-shrink: 0; /* Zapobiega skalowaniu zdjęcia */
 }
 
-.opisnalesniki {
+.ciasteczkaD {
+  background:
+  url('../components/images/ciasteczka.jpg');
+  background-size: cover;
+}
+
+.BezaPavlova {
+  background:
+  url('../components/images/BezaPavlova.jpg');
+  background-size: cover;
+}
+
+.BrownieBezglutenowe {
+  background: url('../components/images/BrownieBezglutenowe.jpg');
+  background-size: cover;
+}
+
+.PuddingChia {
+  background: url('../components/images/PuddingChia.jpg');
+  background-size: cover;
+}
+
+.opis {
   padding-left: 50px;
+  padding-right: 50px;
 }
 /* Tekst opisu naleśników */
 .opisnalesniki h2 {
@@ -104,4 +164,214 @@
   height: 2px; /* Grubość linii */
   background-color: #f39c12; /* Kolor linii */
   margin-top: 5px; /* Odstęp od tekstu */
+}
+
+
+
+
+/* Kontener karuzeli */
+.carousel-container {
+  background:  linear-gradient(to top, rgba(233, 171, 0, 0.075), #ffffff 90%);
+  padding-left: 100px;
+  padding-bottom: 50px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.titleC {
+  padding-bottom: 20px;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}
+
+.carousel {
+  display: flex; /* Ustawienie elementów obok siebie */
+  align-items: flex-start; 
+}
+
+.carousel-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Ustawienie tytułu i tekstu w kolumnie (jeden pod drugim) */
+  justify-content: flex-start; /* Ustawienie w pionie */
+  margin-left: 20px; /* Odstęp między zdjęciem a tekstem */
+}
+
+
+
+.carousel-title {
+  font-family: 'Pacifico', cursive;
+  padding-top: 20px;
+  padding-left: 5%;
+  font-size: xx-large;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.carousel-text {
+  width: 70%;
+  padding-left: 5%;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.onC,.twC,.thC {
+  background: url('../components/images/nalesniki.jpg');
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Zapobiega skalowaniu zdjęcia */
+  transition: transform 0.5s ease; /* Animacja powrotu */
+}
+
+.twC{
+  background: url('../components/images/BezaPavlova.jpg');
+  background-size: cover;
+}
+
+.thC{
+  background: url('../components/images/ciasteczka.jpg');
+  background-size: cover;
+}
+
+
+.ZmianaMenu {
+  display: flex;
+  padding-top: 1%;
+  gap: 85%; /* Odstęp między przyciskami */
+}
+
+
+.Lewo, .Prawo {
+  width: 40px; /* Średnica przycisku */
+  height: 40px; /* Średnica przycisku */
+  border: 2px solid rgba(0, 0, 0, 0.8); /* Białe obramowanie z przejrzystością */
+  border-radius: 50%; /* Okrągły kształt */
+  cursor: pointer; /* Ręka przy najechaniu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Umożliwia dodanie strzałki wewnątrz */
+  transition: transform 0.2s ease; /* Animacje */
+}
+
+.Lewo::before, .Prawo::before {
+  content: ''; /* Strzałka */
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgb(0, 0, 0); /* Górna linia strzałki */
+  border-right: 2px solid rgb(0, 0, 0); /* Prawa linia strzałki */
+  position: absolute;
+}
+
+.Lewo::before {
+  transform: rotate(225deg); /* Odwrócenie strzałki w lewo */
+}
+
+.Prawo::before {
+  transform: rotate(45deg); /* Strzałka w prawo */
+}
+
+.Lewo:hover, .Prawo:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Zmiana koloru przy najechaniu */
+  transform: scale(1.1); /* Powiększenie przycisku */
+}
+
+.Lewo:active, .Prawo:active {
+  transform: scale(0.95); /* Lekkie zmniejszenie przy kliknięciu */
+}
+
+
+
+
+
+
+
+
+
+
+/* Maksymalna szerokość 1200px */
+@media (max-width: 1200px) {
+  
+
+  .menu-container {
+    height: 85vh;
+  }
+
+  .menu-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(285%, -165%);
+    font-size: 0.87rem;
+  }
+
+
+    /* Pojedynczy element "naleśnik z serem" */
+  .NalesnikZSerem {
+    display: grid;
+    text-align: center; /* Wyrównanie pionowe */
+    padding: 70px;
+    width: 30%;
+  }
+
+  .nalesniki {
+    transform: translate(45%,0%);
+  }
+}
+
+/* Maksymalna szerokość 1024px */
+@media (max-width: 1024px) {
+  .menu-container {
+    height: 70vh;
+    transform: translate(-20%, 0%) scale(1.4);
+  }
+
+  .menu-text {
+    width: 27%;
+    top: 50%;
+    left: 50%;
+    transform: translate(220%, -145%);
+    font-size: 0.8rem;
+  }
+
+}
+
+/* Maksymalna szerokość 768px */
+@media (max-width: 768px) {
+  .menu-container {
+    height: 60vh;
+    transform: translate(-50%, 10%) scale(2);
+  }
+
+  .menu-text {
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(120%, -80%);
+    font-size: 0.8rem;
+  }
+}
+
+/* Maksymalna szerokość 480px */
+@media (max-width: 480px) {
+  .menu-container {
+    height: 60vh;
+    transform: translate(-50%, 10%) scale(2);
+  }
+
+  .menu-text {
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(120%, -80%);
+    font-size: 0.8rem;
+  }
+
 }
