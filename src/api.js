@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL;
+const API_BASE_URL = "https://slodkachwila.onrender.com";
 
 
 fetch(`${API_BASE_URL}/api/messages`, {
