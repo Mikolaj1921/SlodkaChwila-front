@@ -26,17 +26,17 @@ const Menu = () => {
   // Lista zdjęć
   const items = [
     { className: 'onC', title: 'Delikatne naleśniki z kremem waniliowym.', text:
-    "Delikatna beza o chrupiącej skórce i miękkim wnętrzu, podana z lekko kwaśną śmietaną i świeżymi owocami sezonowymi. To ciasto pełne kontrastów smakowych – słodycz bezy, kremowość śmietany i świeżość owoców."
+    "Delikatne naleśniki z kremem waniliowym – miękkie i puszyste naleśniki wypełnione aksamitnym kremem waniliowym, polane rozpływającą się czekoladą, udekorowane kawałkami świeżych truskawek i delikatnie posypane cukrem pudrem. Wykwintny deser idealny na każdą okazję."
     },
     
 
     { className: 'twC', title: 'Beza Pavlova z owocami sezonowymi.', text:
-    'dasasdsdaasd'
+    "Delikatna beza o chrupiącej skórce i miękkim wnętrzu, podana z lekko kwaśną śmietaną i świeżymi owocami sezonowymi. To ciasto pełne kontrastów smakowych – słodycz bezy, kremowość śmietany i świeżość owoców."
     },
 
 
-    { className: 'thC', title: 'Kruche ciasteczka z czekoladą.' , text:
-    'sdaasdadsasd'
+    { className: 'thC', title: 'Kruche ciasteczka z marmoladą truskawkową.' , text:
+    "Kruche ciasteczka z marmoladą truskawkową – delikatne, maślane ciasteczka wypełnione słodką i aromatyczną marmoladą truskawkową. Idealne jako przekąska do kawy lub herbaty, zachwycają smakiem i prostotą wykonania."
     }
   ];
 
@@ -52,11 +52,11 @@ const Menu = () => {
   return (
     <div className="menu-page">
 
-      <div className="menu-container"> 
+      <section className="menu-container"> 
 
         <div className="menu-text">
             <h1 className="menu-title">Menu</h1>
-
+            
               <p>W naszej kuchni zwracamy uwagę</p>
               <p>na jakość składników, oraz sposób</p>
               <p>ich połączenia. Musimy być pewni,</p>
@@ -71,42 +71,43 @@ const Menu = () => {
 
 
         </div>
-      </div>
+      </section>
 
 
       <section class="carousel-container">
-        <h2 class="titleC">Nowości w menu</h2>
+        <h2 id="Nowości w menu" className="titleC">Nowości w menu</h2>
         <div class="carousel">
-          <div className={`carousel-image ${items[currentIndex].className}`}>
-            <span>{items[currentIndex].alt}</span>
+          
+          <div className='carousel-image'>
+            <div className={`Carousel-image ${items[currentIndex].className}`}>
+              <span>{items[currentIndex].alt}</span>
+            </div>
           </div>
 
           <div className="carousel-text-container">
             <p className="carousel-title">{items[currentIndex].title}</p>
             <p className="carousel-text">{items[currentIndex].text}</p>
+          </div> 
 
-          </div>    
-        </div>
-        
-        
-        <div className="ZmianaMenu">
-              <button className="Lewo" onClick={goToPrev}></button>
-              <button className="Prawo" onClick={goToNext}></button>
         </div>
       </section>
 
+      <div className="ZmianaMenu">
+              <button className="Lewo" onClick={goToPrev}></button>
+              <button className="Prawo" onClick={goToNext}></button>
+      </div>
 
 
       
 
       <section className="slodkie">
-      <h1 id="CiastaNaKazdaOkazje" className='Naglowek'>Ciasta na każdą okazję</h1>  
-          <div className="PositionMenuFirst">
-              <div className="nalesniki" ></div>
-              <div className="opis">
-                <h2 className="dish-title">Naleśniki z mąki kokosowej z serem - 20 zł</h2>
-                <p>Delikatne naleśniki z twarogiem waniliowym i sosem owocowym oraz świeżą truskawką.</p>
-              </div>
+          <h1 id="CiastaNaKazdaOkazje" className='Naglowek'>- Ciasta na każdą okazję -</h1>  
+            <div className="PositionMenuFirst">
+              <div className="Nalesniki" ></div>
+                <div className="opis">
+                  <h2 className="dish-title">Naleśniki z mąki kokosowej z serem - 20 zł</h2>
+                  <p>Delikatne naleśniki z twarogiem waniliowym i sosem owocowym oraz świeżą truskawką.</p>
+                </div>
             </div>
 
             <div className="PositionMenuRight">
@@ -125,7 +126,7 @@ const Menu = () => {
               </div>
             </div>
 
-        <h1 id="Świeże ciasteczka" className='Naglowek'>Świeże ciasteczka</h1>\
+        <h1 id="Świeże ciasteczka" className='Naglowek'>- Świeże ciasteczka -</h1>\
 
           <div className="PositionMenuFirst">
             <div className="ciasteczkaD" ></div>
@@ -145,11 +146,11 @@ const Menu = () => {
             <div className="PuddingChia" ></div>
           </div>
 
-        <h1 id="DeseryBezglutenowe" className='Naglowek'>Desery Bezglutenowe</h1>        
+        <h1 id="DeseryBezglutenowe" className='Naglowek'>- Desery Bezglutenowe -</h1>        
 
 
           <div className="PositionMenuFirst">
-            <div className="nalesniki" ></div>
+            <div className="Nalesniki" ></div>
             <div className="opis">
               <h2 className="dish-title">Naleśniki z mąki kokosowej z serem - 20 zł</h2>
               <p>Delikatne naleśniki z twarogiem waniliowym i sosem owocowym oraz świeżą truskawką.</p>

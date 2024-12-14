@@ -41,8 +41,8 @@ const Home = () => {
             </button>
           </div>
           <div className="card2">
-            <button onClick={() => goToSection('Świeże ciasteczka')}>
-              Świeże ciasteczka
+            <button onClick={() => goToSection('Nowości w menu')}>
+              Nowości w menu
             </button>
           </div>
           <div className="card3">

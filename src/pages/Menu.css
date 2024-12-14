@@ -1,16 +1,14 @@
-
-
 .menu-container {
+  display: flex;
   position: relative;
   height: 100vh;
   background:  linear-gradient(to bottom, rgba(233, 171, 0, 0), #ffffff 90%),
-   url('../components/images/menu.jpg');
-  background-size: cover;
-  background-position: center;
+   url('../components/images/menu.jpg') no-repeat 
+   center / cover;
 }
 
 .menu-text {
-  font-family: 'Times New Roman', Times, serif;
+  font: medium , 'Times New Roman', Times, serif;
   width: 24%;
   height: 20px;
   top: 50%;
@@ -18,11 +16,11 @@
   transform: translate(280%, 500%);
   color: rgb(255, 255, 255);
   text-align: left ;
-  font-size: medium;
 }
 
 .menu-title {
-  font-size: xx-large;
+  width: 100%;
+  font-size: xx-large ;
   color: rgb(0, 0, 0);
   font-family: 'Pacifico', cursive;
   padding-bottom: 10px;
@@ -51,8 +49,10 @@
 
 /* Sekcja słodkich naleśników */
 .slodkie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Wyśrodkowanie w poziomie */
   background: linear-gradient(to bottom, rgba(233, 171, 0, 0.075), #f7f1e1 99%);
-  align-items: center;
 }
 
 .Naglowek {
@@ -64,6 +64,8 @@
 }
 
 
+
+
 /* Pojedynczy element "naleśnik z serem" */
 .PositionMenuFirst {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.048), #f7f1e1 99%);
@@ -71,6 +73,7 @@
   align-items: center;
   padding: 50px;
   width: 100%;
+  justify-content: center;
 }
 
 /* Pojedynczy element "naleśnik z serem" */
@@ -80,6 +83,7 @@
   align-items: center;
   padding: 50px;
   width: 100%;
+  justify-content: center;
 }
 
 /* Pojedynczy element "naleśnik z serem" */
@@ -89,6 +93,7 @@
   align-items: center;
   padding: 50px;
   width: 100%;
+  justify-content: center;
 }
 
 /* Pojedynczy element "naleśnik z serem" */
@@ -98,18 +103,23 @@
   align-items: center;
   padding: 50px;
   width: 100%;
+  justify-content: center;
 }
 
 /* Tło naleśników */
-.nalesniki , .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD{
-  background: url('../components/images/nalesniki.jpg');
+.BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
   width: 400px;
   height: 300px;
-  background-size: cover;
   background-position: center;
   border-radius: 5px;
   margin-bottom: 20px;
   flex-shrink: 0; /* Zapobiega skalowaniu zdjęcia */
+}
+
+
+.Nalesniki {
+  background: url('../components/images/nalesniki.jpg');
+  background-size: cover;
 }
 
 .ciasteczkaD {
@@ -135,19 +145,9 @@
 }
 
 .opis {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-/* Tekst opisu naleśników */
-.opisnalesniki h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.opisnalesniki p {
-  font-size: 16px;
-  color: #333;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 55%;
 }
 
 .dish-title {
@@ -160,22 +160,29 @@
 .dish-title::after {
   content: ""; /* Pseudoelement nie ma treści */
   display: block; /* Traktuj go jak element blokowy */
-  width: 40cap; /* Długość linii */
   height: 2px; /* Grubość linii */
   background-color: #f39c12; /* Kolor linii */
   margin-top: 5px; /* Odstęp od tekstu */
+  width: 100%;
 }
 
 
 
+/*znikanie animacja*/
+@keyframes fadeOut {
+  0% {opacity: 0.2;}
+  15% {opacity: 1;}
+  30% {opacity: 0.1;}
+}
 
 /* Kontener karuzeli */
 .carousel-container {
   background:  linear-gradient(to top, rgba(233, 171, 0, 0.075), #ffffff 90%);
-  padding-left: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   position: relative;
   border-radius: 10px;
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
 }
 
 .titleC {
@@ -185,12 +192,18 @@
   font-family: 'Pacifico', cursive;
 }
 
+
+.carousel-image{
+  padding-left: 100px;
+}
+
 .carousel {
   display: flex; /* Ustawienie elementów obok siebie */
   align-items: flex-start; 
 }
 
 .carousel-text-container {
+  padding-left: 30px;
   width: 100%;
   display: flex;
   flex-direction: column; /* Ustawienie tytułu i tekstu w kolumnie (jeden pod drugim) */
@@ -242,9 +255,15 @@
 
 
 .ZmianaMenu {
-  display: flex;
-  padding-top: 1%;
-  gap: 85%; /* Odstęp między przyciskami */
+  padding-bottom: 5%;
+  gap: 80%; /* Odstęp między przyciskami */
+  background-color: rgba(233, 171, 0, 0.075);
+  display: flex; /* Flexbox dla elastycznego rozmieszczenia elementów */
+  flex-direction: row; /* Ustawienie elementów w jednym wierszu */
+  width: 100%; /* Ustalamy szerokość listy na 100%, aby rozciągnęła się na całą szerokość kontenera */
+  justify-content: center; /* Wyśrodkowanie w poziomie */
+  animation: fadeOut 2s forwards;
+  animation-timeline: scroll();
 }
 
 
@@ -306,10 +325,25 @@
   }
 
   .menu-text {
+    display: flex;
+    flex-wrap: wrap;
     top: 50%;
     left: 50%;
-    transform: translate(285%, -165%);
+    transform: translate(285%, 300%);
     font-size: 0.87rem;
+  }
+
+  .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
+    width: 350px;
+    height: 250px;
+  }
+
+  .PositionMenuFirst,.PositionMenuLeft,.PositionMenuRight,.PositionMenuEnd{
+    flex-wrap: wrap;
+  }
+
+  .opis{
+    padding: 20px;
   }
 
 
@@ -330,15 +364,19 @@
 @media (max-width: 1024px) {
   .menu-container {
     height: 70vh;
-    transform: translate(-20%, 0%) scale(1.4);
   }
 
   .menu-text {
-    width: 27%;
-    top: 50%;
-    left: 50%;
-    transform: translate(220%, -145%);
-    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(280%, 265%);
+    font-size: 0.7rem;
+  }
+
+
+  .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
+    width: 300px;
+    height: 200px;
   }
 
 }
@@ -346,32 +384,68 @@
 /* Maksymalna szerokość 768px */
 @media (max-width: 768px) {
   .menu-container {
+    display: flex;
+    position: relative;
     height: 60vh;
-    transform: translate(-50%, 10%) scale(2);
+    background:  linear-gradient(to bottom, rgba(233, 171, 0, 0), #ffffff 90%);
+    background-size: cover;
+    background-position: center;
   }
 
   .menu-text {
-    width: 30%;
-    top: 50%;
-    left: 50%;
-    transform: translate(120%, -80%);
-    font-size: 0.8rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(50%, 150%);
+    font-size: 0.9rem;
   }
+
+  .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
+    width: 300px;
+    height: 200px;
+  }
+
+  .carousel-image{
+    padding-left: 0;
+  }
+
+  .carousel-text-container{
+    padding: 0%;
+    width: 90%;
+  }
+
+.carousel-title{
+  padding-left: 0%;
+}
+
+  .carousel-text {
+    width: 90%;
+  }
+
+  .carousel{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
 }
 
 /* Maksymalna szerokość 480px */
 @media (max-width: 480px) {
-  .menu-container {
-    height: 60vh;
-    transform: translate(-50%, 10%) scale(2);
-  }
+
 
   .menu-text {
-    width: 30%;
-    top: 50%;
-    left: 50%;
-    transform: translate(120%, -80%);
-    font-size: 0.8rem;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translate(50%, 100%);
+    font-size: 0.75rem;
+  }
+
+  .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
+    width: 300px;
+    height: 200px;
   }
 
 }
