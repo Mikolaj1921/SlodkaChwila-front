@@ -3,25 +3,39 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Contact.css";
 import ContactForm from "../components/ContactForm";
-import logoIcon from "../components/images/logosl.png";
-
+import logoIcon from "../components/images/logostr.png";
 
 const Contact = () => {
   const [location, setLocation] = useState(null);
 
+  // Dynamiczny URL backendu
+  const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+
   useEffect(() => {
     // Pobierz współrzędne z backendu
-    fetch("https://slodkachwila.onrender.com/api/location")
-      .then((response) => response.json())
+    fetch(`${backendUrl}/api/location`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Błąd serwera: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
-        setLocation(data); // Zapisz lokalizację w stanie
+        console.log("Otrzymane dane lokalizacji:", data);
+        setLocation(data);
       })
       .catch((error) => console.error("Błąd pobierania lokalizacji:", error));
-  }, []); // Uruchomi się tylko raz po zamontowaniu komponentu
+  }, [backendUrl]);
 
   useEffect(() => {
     if (location) {
-      // Inicjalizacja mapy Leaflet tylko po załadowaniu lokalizacji
+      // Jeżeli mapa jest już zainicjowana, nie twórz jej ponownie
+      const existingMap = document.getElementById("map");
+      if (existingMap._leaflet_id) {
+        return; // Zwróć, jeśli mapa już istnieje
+      }
+
+      // Inicjalizacja mapy Leaflet
       const map = L.map("map").setView([location.latitude, location.longitude], 15);
 
       // Dodanie warstwy mapy OpenStreetMap
@@ -32,10 +46,10 @@ const Contact = () => {
 
       // Tworzenie ikony na podstawie obrazu (logo)
       const icon = L.icon({
-        iconUrl: logoIcon, // Ścieżka do logo w folderze public
-        iconSize: [40, 40], // Rozmiar ikony (możesz dostosować)
-        iconAnchor: [20, 40], // Ustawienie punktu kotwiczenia na dole
-        popupAnchor: [0, -40], // Ustawienie popupu nad markerem
+        iconUrl: logoIcon, // Ścieżka do ikony
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -40],
       });
 
       // Dodanie znacznika na mapie
@@ -43,9 +57,8 @@ const Contact = () => {
         .addTo(map)
         .bindPopup(location.name || "Cukiernia Słodka Chwila")
         .openPopup();
-    
     }
-  }, [location]); // Ten efekt uruchomi się, gdy `location` się zmieni
+  }, [location]); // Zależy od 'location'
 
   return (
     <div className="contact-page">

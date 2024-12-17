@@ -10,12 +10,16 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    // Dynamiczny URL backendu z zmiennej środowiskowej
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+
     try {
-      const response = await fetch("https://slodkachwila.onrender.com/contact", {
+      const response = await fetch(`${backendUrl}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+
       if (response.ok) {
         alert("Wiadomość została wysłana!");
       } else {
@@ -28,7 +32,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-form-container">
-      <h2 className="contact-form-title">Skontaktuj się z nami po przez formularz</h2>
+      <h2 className="contact-form-title">Skontaktuj się z nami przez formularz</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="name">Imię i nazwisko</label>
