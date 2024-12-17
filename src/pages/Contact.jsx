@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 import "./Contact.css";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
+  const [location, setLocation] = useState(null);
+
+  useEffect(() => {
+    // Pobierz współrzędne z backendu
+    fetch("https://slodkachwila.onrender.com/api/location") // Podmień na adres produkcyjny
+      .then((response) => response.json())
+      .then((data) => {
+        setLocation(data);
+
+        // Inicjalizacja mapy Leaflet
+        const map = L.map("map").setView([data.latitude, data.longitude], 15);
+
+        // Dodanie warstwy mapy OpenStreetMap
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        // Dodanie znacznika na mapie
+        L.marker([data.latitude, data.longitude])
+          .addTo(map)
+          .bindPopup(data.name)
+          .openPopup();
+      })
+      .catch((error) => console.error("Błąd pobierania lokalizacji:", error));
+  }, []);
+
   return (
     <div className="contact-page">
       <h1 className="contact-title">ZNAJDŹ NAS</h1>
@@ -10,20 +39,11 @@ const Contact = () => {
         Jesteśmy tutaj, aby odpowiedzieć na Twoje pytania i pomóc w każdej sprawie!
       </p>
 
-
       <div className="contact-info">
+        {/* Miejsce na mapę */}
         <aside className="map-container">
-          <iframe
-            title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2562.659834413859!2d21.99834561570134!3d50.03656577942113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cfa8b9cd40315%3A0x5e8c94736a3d6675!2sRynek%2022%2C%2035-064%20Rzesz%C3%B3w!5e0!3m2!1spl!2spl!4v1690205150017!5m2!1spl!2spl"
-            width="100%"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+          <div id="map" style={{ width: "100%", height: "450px" }}></div>
         </aside>
-
 
         <div className="contact-details">
           <p><strong>Email:</strong> slodka@chwila.rzeszow.pl</p>
