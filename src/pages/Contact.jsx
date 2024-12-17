@@ -9,28 +9,32 @@ const Contact = () => {
 
   useEffect(() => {
     // Pobierz współrzędne z backendu
-    fetch("https://slodkachwila.onrender.com/api/location") // Podmień na adres produkcyjny
+    fetch("https://slodkachwila.onrender.com/api/location")
       .then((response) => response.json())
       .then((data) => {
-        setLocation(data);
-
-        // Inicjalizacja mapy Leaflet
-        const map = L.map("map").setView([data.latitude, data.longitude], 15);
-
-        // Dodanie warstwy mapy OpenStreetMap
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          attribution:
-            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        }).addTo(map);
-
-        // Dodanie znacznika na mapie
-        L.marker([data.latitude, data.longitude])
-          .addTo(map)
-          .bindPopup(data.name)
-          .openPopup();
+        setLocation(data); // Zapisz lokalizację w stanie
       })
       .catch((error) => console.error("Błąd pobierania lokalizacji:", error));
-  }, []);
+  }, []); // Uruchomi się tylko raz po zamontowaniu komponentu
+
+  useEffect(() => {
+    if (location) {
+      // Inicjalizacja mapy Leaflet tylko po załadowaniu lokalizacji
+      const map = L.map("map").setView([location.latitude, location.longitude], 15);
+
+      // Dodanie warstwy mapy OpenStreetMap
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Dodanie znacznika na mapie
+      L.marker([location.latitude, location.longitude])
+        .addTo(map)
+        .bindPopup(location.name || "Cukiernia Słodka Chwila")
+        .openPopup();
+    }
+  }, [location]); // Ten efekt uruchomi się, gdy `location` się zmieni
 
   return (
     <div className="contact-page">
