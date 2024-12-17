@@ -7,7 +7,6 @@ import ContactForm from "../components/ContactForm";
 const Contact = () => {
   const [location, setLocation] = useState(null);
 
-  
   useEffect(() => {
     // Pobierz współrzędne z backendu
     fetch("https://slodkachwila.onrender.com/api/location") // Podmień na adres produkcyjny
