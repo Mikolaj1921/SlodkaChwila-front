@@ -9,7 +9,7 @@ const Contact = () => {
   const [location, setLocation] = useState(null);
 
   // Dynamiczny URL backendu
-  const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const backendUrl = "https://slodkachwila.onrender.com" || "http://localhost:5000";
 
   useEffect(() => {
     // Pobierz współrzędne z backendu
