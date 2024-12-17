@@ -3,6 +3,8 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./Contact.css";
 import ContactForm from "../components/ContactForm";
+import logoIcon from "../components/images/logosl.png";
+
 
 const Contact = () => {
   const [location, setLocation] = useState(null);
@@ -30,7 +32,7 @@ const Contact = () => {
 
       // Tworzenie ikony na podstawie obrazu (logo)
       const icon = L.icon({
-        iconUrl: '../components/images/logosl.png', // Ścieżka do logo w folderze public
+        iconUrl: logoIcon, // Ścieżka do logo w folderze public
         iconSize: [40, 40], // Rozmiar ikony (możesz dostosować)
         iconAnchor: [20, 40], // Ustawienie punktu kotwiczenia na dole
         popupAnchor: [0, -40], // Ustawienie popupu nad markerem
@@ -41,6 +43,7 @@ const Contact = () => {
         .addTo(map)
         .bindPopup(location.name || "Cukiernia Słodka Chwila")
         .openPopup();
+    
     }
   }, [location]); // Ten efekt uruchomi się, gdy `location` się zmieni
 
