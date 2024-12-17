@@ -28,8 +28,16 @@ const Contact = () => {
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
+      // Tworzenie ikony na podstawie obrazu (logo)
+      const icon = L.icon({
+        iconUrl: '../components/images/logosl.png', // Ścieżka do logo w folderze public
+        iconSize: [40, 40], // Rozmiar ikony (możesz dostosować)
+        iconAnchor: [20, 40], // Ustawienie punktu kotwiczenia na dole
+        popupAnchor: [0, -40], // Ustawienie popupu nad markerem
+      });
+
       // Dodanie znacznika na mapie
-      L.marker([location.latitude, location.longitude])
+      L.marker([location.latitude, location.longitude], { icon })
         .addTo(map)
         .bindPopup(location.name || "Cukiernia Słodka Chwila")
         .openPopup();
