@@ -10,8 +10,8 @@ const ContactForm = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    // Dynamiczny URL backendu z zmiennej środowiskowej
-    const backendUrl = "https://slodkachwila.onrender.com" || "http://localhost:5000";
+    // Użycie zmiennej środowiskowej do określenia URL backendu
+    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
 
     try {
       const response = await fetch(`${backendUrl}/contact`, {
@@ -37,13 +37,15 @@ const ContactForm = () => {
         <div>
           <label htmlFor="name">Imię i nazwisko</label>
           <input
-            {...register("name", { required: "To pole jest wymagane" })}
+            {...register("nameSurname", { required: "To pole jest wymagane" })}
             className="form-input"
             id="name"
             type="text"
             placeholder="Wpisz swoje imię"
           />
-          {errors.name && <p className="contact-form-message">{errors.name.message}</p>}
+          {errors.nameSurname && (
+            <p className="contact-form-message">{errors.nameSurname.message}</p>
+          )}
         </div>
         <div>
           <label htmlFor="email">Email</label>
