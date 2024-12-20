@@ -11,8 +11,8 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     // Użycie zmiennej środowiskowej do określenia URL backendu
-    const backendUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
-
+    const backendUrl = process.env.REACT_APP_BACKEND_URL;
+// || "http://localhost:5000"
     try {
       const response = await fetch(`${backendUrl}/contact`, {
         method: "POST",
