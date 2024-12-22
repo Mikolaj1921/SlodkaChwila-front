@@ -126,7 +126,7 @@ const Menu = () => {
               </div>
             </div>
 
-        <h1 id="Świeże ciasteczka" className='Naglowek'>- Świeże ciasteczka -</h1>\
+        <h1 id="Świeże ciasteczka" className='Naglowek'>- Świeże ciasteczka -</h1>
 
           <div className="PositionMenuFirst">
             <div className="ciasteczkaD" ></div>

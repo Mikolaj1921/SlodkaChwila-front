@@ -1,11 +1,14 @@
 /* Header.css */
 
 
-header {
-    background-color: #333;
+  header {
+    background-color: #333333;
     padding: 10px 20px;
-    border-bottom: 3px solid #f39c12;
     position: relative;
+  }
+
+  .menu-icon {
+    opacity: 0; /* Прозрачность 50% */
   }
   
   nav {
@@ -32,7 +35,7 @@ header {
   
   .nav-links li a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
     font-family: 'Sora', sans-serif; /* Czcionka dla linków */
     font-weight: 550; /* Pogrubienie tekstu */
@@ -109,14 +112,7 @@ header {
   }
   
   
-  .close-sidebar {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
+
   
 
     /* Widoczność sidebara tylko na desktopie */
@@ -134,7 +130,6 @@ header {
   @media (max-width: 768px) {
     header {
       padding: 10px;
-      border-bottom: 3px solid #f39c12; /* Podkreślenie na dole w wersji mobilnej */
     }
   
     .sidebar {
@@ -171,9 +166,12 @@ header {
     }
   
     .menu-icon {
+      opacity: 1;
       display: block;
       cursor: pointer;
       font-size: 30px;
       color: white;
     }
   }
+
+

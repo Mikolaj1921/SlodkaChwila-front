@@ -374,6 +374,7 @@
   }
 
 
+
   .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
     width: 300px;
     height: 200px;
@@ -392,12 +393,21 @@
     background-position: center;
   }
 
+
+  .carousel-text{
+    height: 120px;
+  }
+
   .menu-text {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
     transform: translate(50%, 150%);
     font-size: 0.9rem;
+  }
+
+  .ZmianaMenu{
+    gap: 75%;
   }
 
   .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
@@ -414,9 +424,9 @@
     width: 90%;
   }
 
-.carousel-title{
-  padding-left: 0%;
-}
+  .carousel-title{
+    padding-left: 0%;
+  }
 
   .carousel-text {
     width: 90%;
@@ -429,10 +439,23 @@
     text-align: center;
   }
 
+  .opis{
+    text-align: center;
+    width: 70%;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+
+  .dish-title{
+    text-align: center;
+  }
 }
 
 /* Maksymalna szerokość 480px */
 @media (max-width: 480px) {
+
 
 
   .menu-text {
@@ -446,6 +469,31 @@
   .BezaPavlova , .BrownieBezglutenowe, .PuddingChia , .ciasteczkaD,.Nalesniki {
     width: 300px;
     height: 200px;
+  }
+
+  .ZmianaMenu{
+    gap: 70%;
+  }
+
+  .carousel-title{
+    height: 150px;
+  }
+  .carousel-text{
+    padding-top: 15px;
+    height: 160px;
+  }
+
+  .opis{
+    text-align: center;
+    width: 85%;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+
+  .dish-title{
+    text-align: center;
   }
 
 }

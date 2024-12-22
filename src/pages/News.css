@@ -1,0 +1,130 @@
+/* Container styles */
+.news-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.news-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #6c4f1f; /* Kolor karmelu */
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
+}
+
+
+
+
+.news-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #f39c12; /* Kolor słodkich wypieków */
+    margin-bottom: 30px;
+}
+
+
+
+/* News List */
+.news-list {
+    margin-bottom: 20px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.news-item p {
+    margin: 10px 0;
+}
+
+.news-item small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Login and Admin Panel */
+.admin-login-trigger {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.login-btn {
+    background-color: #33333343;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background-color: #f39d127c;
+}
+
+.login-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* News creation form */
+.new-news-form {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.new-news-form input, .new-news-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.social-icons{
+    padding-top: 120px;
+}
