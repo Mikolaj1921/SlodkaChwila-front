@@ -1,4 +1,4 @@
-
+import { Helmet } from 'react-helmet';
 import React from 'react';  // Import useState here
 import './Home.css';
 import './Homecards.css';
@@ -18,6 +18,10 @@ const Home = () => {
     <div className="home-page">
       <div className="menu-cont">
         <div className="title-names">
+          <Helmet>
+            <title>Słodka Chwila - Ciepłe, domowe wypieki na każdą okazję </title>
+            <meta name="description" content="Strona O Nas - Dowiedz się więcej o Słodkiej Chwili i naszych usługach w Rzeszowie." />
+          </Helmet>
           <h1 className="hero-title">Witaj w Słodkiej Chwili!</h1>
           <p className="hero-subtitle">Ciepłe, domowe wypieki na każdą okazję</p>
         </div>
